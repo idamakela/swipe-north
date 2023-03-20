@@ -1,1 +1,28 @@
-@import 'variables';
+@import "variables";
+
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+html {
+    height: 100vh;
+}
+
+body {
+    height: 100%;
+    background-color: grey;
+}
+
+main {
+    margin: 10px;
+}
+
+h2 {
+    .swiper-title {
+        margin: 10px;
+        font-size: 5em;
+        padding: 1em;
+    }
+}
