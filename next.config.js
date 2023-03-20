@@ -5,4 +5,9 @@ const nextConfig = {
   },
 }
 
-module.exports = nextConfig
+module.exports = {
+  nextConfig,
+  sassOptions: {
+    includePaths: [path.join(__dirname, 'styles')], 
+  }
+}
