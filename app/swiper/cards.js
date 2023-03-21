@@ -1,6 +1,6 @@
 import TinderCard from "react-tinder-card";
 import { FaUndo, FaAngleDoubleUp, FaHeart } from "react-icons/fa";
-import { IoMdClose } from "react-icons/io";
+import { Close } from "grommet-icons";
 import styles from "../../styles/swiper.module.scss";
 
 export default function Cards({
@@ -28,7 +28,7 @@ export default function Cards({
                         </button>
                     </div>
                     {/* this below needs logic to set right icon */}
-                    <p>{`${icon} ${type}%`}</p> 
+                    <p>{`${icon} ${type}%`}</p>
                     <p>{desc}</p>
                 </div>
                 <div className={styles.btnContainer}>
@@ -39,7 +39,7 @@ export default function Cards({
                         <FaHeart />
                     </button>
                     <button className={styles.remove}>
-                        <IoMdClose />
+                        <Close />
                     </button>
                 </div>
             </div>
