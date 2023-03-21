@@ -1,0 +1,17 @@
+.title {
+    background-color: blue;
+}
+
+.cards {
+    margin: 10px;
+    background-color: black;
+}
+
+.container {
+    height: 100vh;
+}
+
+.card {
+    background-color: white;
+    color: aqua;
+}

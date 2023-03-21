@@ -1,22 +1,30 @@
-import { register } from "swiper/element/bundle";
-import styles from "../../styles/page.module.scss";
+"use client";
+import { useState } from "react";
+import TinderCard from "react-tinder-card";
+import Cards from "./cards";
+import styles from "../../styles/swiper.modules.css";
 
 export default function Swiper() {
-    register();
+    const [job, setJob] = useState([]);
 
     return (
         <>
-            <h2 className='swiper-title'>HI. this is the swiper page</h2>
+            <div>
+                <h2 className={styles.title}>
+                    HI. this is the swiper page select
+                </h2>
+            </div>
             <div className={styles.cards}>
-                <swiper-container
-                    className={styles.container}
-                    slides-per-view='1'
-                    loop='true'
-                >
-                    <swiper-slide className={styles.card}>Slide 1</swiper-slide>
-                    <swiper-slide className={styles.card}>Slide 2</swiper-slide>
-                    <swiper-slide className={styles.card}>Slide 3</swiper-slide>
-                </swiper-container>
+                {job.map((job) => (
+                    <TinderCard>
+                        <div className={styles.card}>
+                            <div className={styles.titles}>
+                                <h3>{job.title}</h3>
+                                <h4>{job.company}</h4>
+                            </div>
+                        </div>
+                    </TinderCard>
+                ))}
             </div>
         </>
     );
