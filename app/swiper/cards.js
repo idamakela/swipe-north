@@ -4,6 +4,8 @@ import { Close, Revert } from "grommet-icons";
 import { RxDoubleArrowUp } from "react-icons/rx";
 import styles from "../../styles/swiper.module.scss";
 
+// continue functions from this example: https://github.com/3DJakob/react-tinder-card-demo/blob/master/src/examples/Advanced.js
+
 export default function Cards({
     id,
     img,
@@ -14,8 +16,13 @@ export default function Cards({
     type,
     desc,
 }) {
+
+    const onSwipe = (direction) => {
+        console.log('you swiped' + ' ' + direction)
+    }
+
     return (
-        <TinderCard className={styles.swipe} key={id} preventSwipe={["down"]}>
+        <TinderCard className={styles.swipe} key={id} preventSwipe={["down"]} onSwipe={onSwipe}>
             <div className={styles.card}>
                 <div className={styles.imgContainer}>
                     <img src={img} alt={imgAlt} height='200px' width='200px' />
