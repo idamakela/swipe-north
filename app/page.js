@@ -1,7 +1,8 @@
-import Image from "next/image";
+
 import { Readex_Pro } from "next/font/google";
 import styles from "../styles/page.module.scss";
 import { FaAngleUp } from 'react-icons/fa'
+import SwipeButtons from "./swiper/SwipeButtons";
 
   const readex_pro = Readex_Pro({
     weight: '400',
@@ -19,8 +20,9 @@ export default function Home() {
                   <p className={styles.medium}><FaAngleUp/></p>
                   <p className={styles.big}><FaAngleUp/></p>
                  </div>
-                <h2 className={styles.swipe}>SWIPE</h2>
+                <SwipeButtons />
               </div>
              </div>
         </main>;
 }
+//<h2 className={styles.swipe}>SWIPE</h2>
