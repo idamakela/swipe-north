@@ -27,7 +27,8 @@ export default function Cards({
                             <FaAngleDoubleUp />
                         </button>
                     </div>
-                    <p>{`${icon} ${type}%`}</p>
+                    {/* this below needs logic to set right icon */}
+                    <p>{`${icon} ${type}%`}</p> 
                     <p>{desc}</p>
                 </div>
                 <div className={styles.btnContainer}>
