@@ -1,6 +1,7 @@
 import TinderCard from "react-tinder-card";
-import { FaUndo, FaAngleDoubleUp, FaHeart } from "react-icons/fa";
-import { Close } from "grommet-icons";
+import { FaHeart } from "react-icons/fa";
+import { Close, Revert } from "grommet-icons";
+import { RxDoubleArrowUp } from "react-icons/rx";
 import styles from "../../styles/swiper.module.scss";
 
 export default function Cards({
@@ -24,16 +25,16 @@ export default function Cards({
                         <h3 className={styles.title}>{title}</h3>
                         <h4 className={styles.company}>{company}</h4>
                         <button className={styles.more}>
-                            <FaAngleDoubleUp />
+                            <RxDoubleArrowUp />
                         </button>
                     </div>
                     {/* this below needs logic to set right icon */}
-                    <p>{`${icon} ${type}%`}</p>
+                    <p className={styles.icons}>{`${icon} ${type}%`}</p>
                     <p>{desc}</p>
                 </div>
                 <div className={styles.btnContainer}>
                     <button className={styles.back}>
-                        <FaUndo />
+                        <Revert />
                     </button>
                     <button className={styles.heart}>
                         <FaHeart />
