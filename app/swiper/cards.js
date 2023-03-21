@@ -1,32 +1,45 @@
 import TinderCard from "react-tinder-card";
+import { FaUndo, FaAngleDoubleUp, FaHeart } from "react-icons/fa";
+import { IoMdClose } from "react-icons/io";
 import styles from "../../styles/swiper.module.scss";
 
-export default function Cards({ id, img, imgAlt, title, company, icon, type, desc }) {
+export default function Cards({
+    id,
+    img,
+    imgAlt,
+    title,
+    company,
+    icon,
+    type,
+    desc,
+}) {
     return (
-        <TinderCard
-            className={styles.swipe}
-            key={id}
-            preventSwipe={["down"]}
-        >
+        <TinderCard className={styles.swipe} key={id} preventSwipe={["down"]}>
             <div className={styles.card}>
-                <div>
-                    <img
-                        src={img}
-                        alt={imgAlt}
-                        height='200px'
-                        width='200px'
-                    />
+                <div className={styles.imgContainer}>
+                    <img src={img} alt={imgAlt} height='200px' width='200px' />
                 </div>
                 <div className={styles.text}>
-                    <h3>{title}</h3>
-                    <h4>{company}</h4>
+                    <div className={styles.header}>
+                        <h3 className={styles.title}>{title}</h3>
+                        <h4 className={styles.company}>{company}</h4>
+                        <button className={styles.more}>
+                            <FaAngleDoubleUp />
+                        </button>
+                    </div>
                     <p>{`${icon} ${type}%`}</p>
                     <p>{desc}</p>
                 </div>
                 <div className={styles.btnContainer}>
-                    <button>back</button>
-                    <button>heart</button>
-                    <button>remove</button>
+                    <button className={styles.back}>
+                        <FaUndo />
+                    </button>
+                    <button className={styles.heart}>
+                        <FaHeart />
+                    </button>
+                    <button className={styles.remove}>
+                        <IoMdClose />
+                    </button>
                 </div>
             </div>
         </TinderCard>
