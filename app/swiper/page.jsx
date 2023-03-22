@@ -1,6 +1,6 @@
 "use client";
 import { useState } from "react";
-import Cards from "./cards";
+import Cards from "./cards.jsx";
 import styles from "../../styles/swiper.module.scss";
 
 export default function Swiper() {
