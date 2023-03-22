@@ -12,7 +12,7 @@ import Link from 'next/link';
 export default function Home() {
     return <main className={`${readex_pro.className} ${styles.main}`}>
              <div className={styles.hero}>
-              <h1 className={styles.title} >Swipe north</h1>
+              <h1 className={styles.title} ></h1>
               <div className={styles.animationContainer}>
                 <div className={styles.angleAnimation}>
                  <Link href="/swiper" >

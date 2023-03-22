@@ -51,6 +51,11 @@
 
 
   .animationContainer {
+    position: relative;
+    bottom: 1vh;
+  }
+
+  .animationContainer {
     .small {
         color: $light-color;
         font-size: 32px;
