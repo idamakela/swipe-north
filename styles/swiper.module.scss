@@ -29,38 +29,45 @@
     border-radius: $base-pixel;
     box-shadow: 0px 18px 53px 0px rgba(0, 0, 0, 0.3);
 
-    .imgContainer {
-        max-height: 50%;
-
-        img {
-            height: 100%;
-            width: 100%;
+    .upperElements {
+        @include flex-column;
+        justify-content: flex-start;
+        
+        .imgContainer {
+            max-height: 50%;
+    
+            img {
+                height: 100%;
+                width: 100%;
+            }
         }
     }
 
+
     .header {
         display: grid;
-        grid-template-columns: repeat(2, 1fr);
+        grid-template-columns: 90% 10%;
         grid-template-rows: repeat(2, 1fr);
         grid-column-gap: 0px;
         grid-row-gap: 0px;
+        margin-top: $base-pixel;
 
         .title {
             grid-area: 1 / 1 / 2 / 2;
-            font-size: 24px;
+            font-size: 2.2rem;
             text-transform: capitalize;
         }
 
         .company {
             grid-area: 2 / 1 / 3 / 2;
-            font-size: 1rem;
+            font-size: 2rem;
             font-weight: normal;
             text-transform: capitalize;
         }
 
         .more {
             grid-area: 1 / 2 / 3 / 3;
-            font-size: 20px;
+            font-size: 2rem;
             width: fit-content;
             align-self: start;
             justify-self: end;
@@ -73,8 +80,8 @@
         }
 
         p {
-            font-size: 15px;
-            margin-bottom: 10px;
+            font-size: 1.5rem;
+            margin-bottom: $base-pixel;
         }
     }
 
