@@ -1,5 +1,5 @@
 
-import agilprojekledare from './images/AgilProjekledare.jpg'
+import agilprojekledare from './images/AgilProjektledare.jpg'
 import bistandshandlaggare from './images/Bistandshandlaggare.jpg'
 import brandman from './images/Brandman.jpg'
 import chiefengineer from './images/ChiefEngineer.jpg'
@@ -10,7 +10,7 @@ import hotelcleaner from './images/HotelCleaner.jpg'
 import kock from './images/Kock.jpg'
 import nurse from './images/Nurses.jpg'
 import samhallsstrateg from './images/Samhallsstrateg.jpg'
-import psykiatri from './images/SommarjobbSocialpshykiatri.jpg'
+// import psykiatri from './images/SommarjobbSocialpshykiatri.jpg'
 import vaktmastare from './images/SommarjobbVaktmastare.jpg'
 import taxi from './images/TaxiDriver.jpg'
 
@@ -211,7 +211,7 @@ const jobs = [
       id: 9,
       title: "Sommarjobb inom socialpsykiatri",
       profesion: "Vård och omsorg",
-      picture:psykiatri ,
+      picture: '', //psykiatri,
       area: "Skellefteå",
       iconDescription: {
         transport: false,

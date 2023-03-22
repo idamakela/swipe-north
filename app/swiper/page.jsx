@@ -1,33 +1,11 @@
 "use client";
 import { useState } from "react";
+import data from '../../public/jobsData.js'
 import Cards from "./cards.jsx";
 import styles from "../../styles/swiper.module.scss";
 
 export default function Swiper() {
-    const [job, setJob] = useState([
-        {
-            id: 1,
-            img: "",
-            alt: "img alt",
-            title: "caffis",
-            company: "byrå",
-            icon: "travel",
-            type: 100,
-            desc: "hdjks fsdkjöahf djsiaöjfeia öjsdöjfieö ajfdköasf jei sjdklöf jeisa ö",
-        },
-        {
-            id: 2,
-            img: "",
-            alt: "img alt",
-            title: "chef",
-            company: "max",
-            icon: "office",
-            type: 100,
-            desc: "hdjks fsdkjöahf djsiaöjfeia öjsdöjfieö ajfdköasf jei sjdklöf jeisa ö",
-        },
-    ]);
-
-    //setJob[dataFile];
+    const [job, setJob] = useState(data);
 
     return (
         <>
