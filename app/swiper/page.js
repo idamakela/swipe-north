@@ -3,7 +3,9 @@ import { useState } from "react";
 import Cards from "./cards";
 import styles from "../../styles/swiper.module.scss";
 
+
 export default function Swiper() {
+
     const [job, setJob] = useState([
         {
             id: 1,

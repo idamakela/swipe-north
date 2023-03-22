@@ -1,38 +1,38 @@
 @import 'variables';
 
-  .hero {
-    display: flex;
-    flex-direction: column;
-    height: 100vh;
-    text-align: center;
-    justify-content: space-between;
+ .main {
+  min-height: 100vh;
   }
 
-  .title {
-    font-size: 80px;
-    line-height: 100px;
-    text-transform: uppercase;
-    top: 8vh;
-    position: relative;
+.animationContainer {
+    align-items: center;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    position: absolute;
+    top: 75vh;
+    width: 90vw;
   }
 
   .swipe {
     color: $light-color;
-    margin-top: 36px;
+    margin-top: 24px;
   }
 
   .small, 
   .medium,
   .big {
-    height: 30px;
-    padding: 0;
-    margin: 0;
     animation-name: stretch;
     animation-duration: 2.5s;
     animation-timing-function: ease-in-out;
     animation-direction: reverse;
     animation-iteration-count: infinite;
     animation-play-state: running;
+    color: $light-color;
+    font-size: 48px;
+    height: 30px;
+    margin: 0;
+    padding: 0;
   }
 
   @keyframes stretch {
@@ -46,27 +46,5 @@
 
     100% {
       transform: scale(1.2);
-    }
-  }
-
-
-  .animationContainer {
-    position: relative;
-    bottom: 1vh;
-  }
-
-  .animationContainer {
-    .small {
-        color: $light-color;
-        font-size: 32px;
-    }
-    .medium {
-        color: $dark-green;
-        font-size: 48px;
-    }
-    
-    .big{
-        color: $light-color;
-         font-size: 68px;
     }
   }

@@ -1,8 +1,12 @@
+"use client";
+import { useState } from "react";
 import TinderCard from "react-tinder-card";
 import { FaHeart } from "react-icons/fa";
 import { Close, Revert } from "grommet-icons";
 import { RxDoubleArrowUp } from "react-icons/rx";
 import styles from "../../styles/swiper.module.scss";
+import BigCard from "./BigCard";
+
 
 // continue functions from this example: https://github.com/3DJakob/react-tinder-card-demo/blob/master/src/examples/Advanced.js
 
@@ -21,6 +25,12 @@ export default function Cards({
         console.log('you swiped' + ' ' + direction)
     }
 
+    const [showModal, setShowModal] = useState(false)
+   
+    const handleClick = () => {
+     setShowModal(true)
+    }
+
     return (
         <TinderCard className={styles.swipe} key={id} preventSwipe={["down"]} onSwipe={onSwipe}>
             <div className={styles.card}>
@@ -31,7 +41,7 @@ export default function Cards({
                     <div className={styles.header}>
                         <h3 className={styles.title}>{title}</h3>
                         <h4 className={styles.company}>{company}</h4>
-                        <button className={styles.more}>
+                        <button className={styles.more} onClick={handleClick}>
                             <RxDoubleArrowUp />
                         </button>
                     </div>
@@ -51,6 +61,10 @@ export default function Cards({
                     </button>
                 </div>
             </div>
+            {showModal && (
+              <BigCard setShowModal={setShowModal} showModal={showModal}/>
+            )}
+            
         </TinderCard>
     );
 }
