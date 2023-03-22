@@ -47,7 +47,7 @@
     .header {
         display: grid;
         grid-template-columns: 90% 10%;
-        grid-template-rows: repeat(2, 1fr);
+        grid-template-rows: 1fr 1fr;
         grid-column-gap: 0px;
         grid-row-gap: 0px;
         margin-top: $base-pixel;
