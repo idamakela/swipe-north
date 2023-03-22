@@ -1,0 +1,13 @@
+@import 'variables';
+@import 'mixins';
+
+.headerStyle {
+    @include flex-row;
+    justify-content: space-between;
+    align-items: center;
+
+    .heart {
+    font-size: 40px;
+    }
+
+}

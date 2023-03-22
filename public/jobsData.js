@@ -19,6 +19,7 @@ const jobs = [
       id: 1,
       title: "Taxichaufför",
       profesion: "Trasport",
+      company:"Skellefteå Taxi AB",
       picture: taxi ,
       area: "Skellefteå",
       iconDescription: {
@@ -43,6 +44,7 @@ const jobs = [
       id: 2,
       title: "Sjuksöterska",
       profesion: "Vård och omsorg",
+      company:"Skellefteå Sjukhuset",
       picture: nurse,
       area: "Skellefteå",
       iconDescription: {
@@ -67,6 +69,7 @@ const jobs = [
       id: 3,
       title: "Biståndshandläggare",
       profesion: "Vård och omsorg",
+      company:"Skellefteå Kommun",
       picture: bistandshandlaggare,
       area: "Skellefteå",
       iconDescription: {
@@ -89,8 +92,9 @@ const jobs = [
      },
     {  
       id: 4,
-      title: "Rektor Lejonström anpassad grundskola",
+      title: "Rektor",
       profesion: "Utbildning",
+      company:"Lejonström anpassad grundskola",
       picture: forskolarektor ,
       area: "Skellefteå",
       iconDescription: {
@@ -115,6 +119,7 @@ const jobs = [
       id: 5,
       title: "Samhällsstrateg",
       profesion: "Administration",
+      company:"Skelleftå Kommun",
       picture: samhallsstrateg,
       area: "Skellefteå",
       iconDescription: {
@@ -139,6 +144,7 @@ const jobs = [
       id: 6,
       title: "Förskollärare",
       profesion: "Utbildning",
+      company:"Kågeskola",
       picture: forskollarare,
       area: "Skellefteå",
       iconDescription: {
@@ -161,8 +167,9 @@ const jobs = [
      },
      {  
       id: 7,
-      title: "Kock, Kågeskolan",
+      title: "Kock",
       profesion: "restaurang",
+      company:"Kågeskola",
       picture: kock,
       area: "Skellefteå",
       iconDescription: {
@@ -187,6 +194,7 @@ const jobs = [
       id: 8,
       title: "Agil projektledare",
       profesion: "It-support",
+      company:"Skellefteå Kommun",
       picture: agilprojekledare,
       area: "Skellefteå",
       iconDescription: {
@@ -211,6 +219,7 @@ const jobs = [
       id: 9,
       title: "Sommarjobb inom socialpsykiatri",
       profesion: "Vård och omsorg",
+      company:"Skellefteå Kommun",
       picture:psykiatri ,
       area: "Skellefteå",
       iconDescription: {
@@ -235,6 +244,7 @@ const jobs = [
       id: 10,
       title: "Sommarjobb - Vaktmästare",
       profesion: "Underhåll",
+      company:"Skellefteå Kommun",
       picture: vaktmastare,
       area: "Skellefteå",
       iconDescription: {
@@ -259,6 +269,7 @@ const jobs = [
       id: 11,
       title: "Brandmän",
       profesion: "Säkerhetsarbete",
+      company:"Skellefteå Kommun",
       picture: brandman,
       area: "Skellefteå",
       iconDescription: {
@@ -283,6 +294,7 @@ const jobs = [
       id: 12,
       title: "Hotellstäd",
       profesion: "Restaurang",
+      company:"Lövånger Gården",
       picture: hotelcleaner,
       area: "Skellefteå",
       iconDescription: {
@@ -294,7 +306,7 @@ const jobs = [
       percentajeJob: 50,
       jobbDescription:"Nu behöver vi stärka upp sommaren och framåt med riktigt skarpa kollegor.Du bör älska att städa, ha det rent och snyggt och älska att jobba med detaljer. Arbetsuppgifterna går ut på att ta hand om och vårda våra vackra stugor i Lövånger Kyrkstad. Det är ca 60 stugor i olika storlekar och samtliga stugor ser olika ut. Stugorna används som hotellverksamhet, boende för bröllopsgäster, turister och konferensgäster. Detta kräver att man har öga för detaljer och perfektion.",
       experience:"Städare/Lokalvårdare - 1-2 års erfarenhet",
-      aboutUs:"Vi på Lövånger Gården, Vi är sommartid runt 20 personer som jobbar med olika delar på hela anläggningen. Vi är medlemmar i Visita och HRF.  ",
+      aboutUs:"Vi är sommartid runt 20 personer som jobbar med olika delar på hela anläggningen. Vi är medlemmar i Visita och HRF.  ",
       contactPerson:{
         contactNamn:"", 
         contactTitle:"",
@@ -307,6 +319,7 @@ const jobs = [
       id: 13,
       title: "Chief Engineeer Plant & Piping",
       profesion: "konstruktör, tillverkningsindustri",
+      company:"Poolia Sverige AB",
       picture: chiefengineer,
       area: "Skellefteå",
       iconDescription: {
@@ -321,7 +334,7 @@ const jobs = [
       aboutUs:"Vi, Poolia söker vi dig som vill stärka oss som Chief Engineer inom Plant & Piping på Metso Outotec. En spännande roll där du ges ett stort ansvar och får arbeta med varierade projekt inom ett starkt och växande företag. Läs mer om tjänsten via www.arbetsformedlingen.se ",
       contactPerson:{
         contactNamn:"", 
-        contactTitle:"Rekryteringskonsult Poolia Sverige AB",
+        contactTitle:"Rekryteringskonsult",
         contactTelefon:"",
         contactEmail:""
       },
@@ -331,6 +344,7 @@ const jobs = [
       id: 14,
       title: "Senior fullstackutvecklare",
       profesion: "It-consult",
+      company:"PersonalExpressen AB",
       picture: fullstackutvecklare,
       area: "Skellefteå",
       iconDescription: {
@@ -345,7 +359,7 @@ const jobs = [
       aboutUs:"På PersonalExpressen gör vi vidare mycket mer än att förmedla konsultuppdrag inom ramarna för vår IT-verksamhet. Vi arbetar även med bemanning av chefer, läkare, sjuksköterskor, lärare och andra samhällsviktiga yrkesgrupper där det offentliga på olika sätt är en central del av vår kundstock. Hjärtligt välkommen till att arbeta som senior fullstackutvecklare tillsammans med oss på PersonalExpressen! PersonalExpressen bemannar med professionella, ambitiösa och jordnära IT-konsulter efter våra kunders behov och önskemål",
       contactPerson:{
         contactNamn:"", 
-        contactTitle:"Rekryteringskonsult PersonalExpressen AB",
+        contactTitle:"Rekryteringskonsult",
         contactTelefon:"",
         contactEmail:""
       },
