@@ -14,6 +14,14 @@ import samhallsstrateg from './images/Samhallsstrateg.jpg'
 import vaktmastare from './images/SommarjobbVaktmastare.jpg'
 import taxi from './images/TaxiDriver.jpg'
 
+/*
+* TODO:
+*   Felstavningar
+*   Psykiatri bild import
+*   Lägg company 
+*/
+
+
 const jobs = [
     {
       id: 1,
