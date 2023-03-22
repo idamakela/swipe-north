@@ -4,8 +4,6 @@
 
 * {
     box-sizing: border-box;
-    margin: 0;
-    padding: 0;
 }
 
 html {
@@ -13,11 +11,7 @@ html {
 }
 
 body {
+    background-color: $light-green;
     height: 100%;
-}
-
-main {
-    margin: 10px;
-}
-
+  }
 
