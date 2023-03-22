@@ -10,12 +10,14 @@ export default function header(){
         <>
         <header className={styles['headerStyle']}>
             <div className={styles['logo']}>
-            <Link href="/">
-                <img src="logo.png" alt="Skellefteå logo" style={{width: "150px"}}></img>
-            </Link>
+                <Link href="/">
+                    <img src="logo.png" alt="Skellefteå logo" style={{width: "150px"}}></img>
+                </Link>
             </div>
             <div className={styles['heart']}>
+                <link href="/savedjobs">
                 <FaHeart />
+                </link>
             </div>
         </header>
         </>
