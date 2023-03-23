@@ -18,6 +18,7 @@ import vaktmastare from './images/SommarjobbVaktmastare.jpg';
  *   Felstavningar
  *   Psykiatri bild import
  *   experience bör vara array
+ *   datum till string 
  */
 
 const jobs = [

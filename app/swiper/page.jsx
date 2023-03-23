@@ -1,5 +1,6 @@
 'use client';
 import { useState } from 'react';
+import TinderCard from 'react-tinder-card';
 import data from '../../public/jobsData.js';
 import Cards from './cards.jsx';
 import styles from '../../styles/swiper.module.scss';
@@ -9,8 +10,12 @@ export default function Swiper() {
 
     const loadMoreJobs = () => {
         const currentLength = jobs.length;
-        const nextJobs = data.slice(currentLength, currentLength + 2);
+        const nextJobs = data.slice(currentLength, currentLength + 2).reverse();
         setJobs([...jobs, ...nextJobs]);
+    }
+
+    const onSwipe = () => {
+        loadMoreJobs();
     }
 
     return (
@@ -20,8 +25,13 @@ export default function Swiper() {
             </div>
             <div className={styles.cardsContainer}>
                 {jobs.map((job) => (
-                    <Cards key={job.id} {...job} />
-                    /* on swipe: loadMoreJobs */
+                    <TinderCard
+                        className={styles.swipe}
+                        preventSwipe={['down']}
+                        onSwipe={onSwipe}
+                    >
+                        <Cards key={job.id} {...job} />
+                    </TinderCard>
                 ))}
             </div>
         </>
