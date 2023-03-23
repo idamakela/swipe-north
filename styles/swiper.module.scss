@@ -1,5 +1,5 @@
-@import "variables";
-@import "mixins";
+@import 'variables';
+@import 'mixins';
 
 .title {
     background-color: transparent;
@@ -32,10 +32,10 @@
     .upperElements {
         @include flex-column;
         justify-content: flex-start;
-        
+
         .imgContainer {
             max-height: 50%;
-    
+
             img {
                 height: 100%;
                 width: 100%;
@@ -43,14 +43,13 @@
         }
     }
 
-
     .header {
         display: grid;
         grid-template-columns: 90% 10%;
         grid-template-rows: 1fr 1fr;
         grid-column-gap: 0px;
         grid-row-gap: 0px;
-        margin-top: $base-pixel;
+        margin-top: $base-pixel 0;
 
         .title {
             grid-area: 1 / 1 / 2 / 2;

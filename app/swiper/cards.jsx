@@ -11,7 +11,7 @@ export default function Cards({
     picture,
     /*imgAlt,*/
     title,
-    /*company,*/
+    company,
     iconDescription,
     percentajeJob,
     jobbDescription,
@@ -49,7 +49,7 @@ export default function Cards({
                     <div className={styles.text}>
                         <div className={styles.header}>
                             <h3 className={styles.title}>{title}</h3>
-                            {/*<h4 className={styles.company}>{company}</h4>*/}
+                            <h4 className={styles.company}>{company}</h4>
                             <button className={styles.more}>
                                 <RxDoubleArrowUp />
                             </button>
