@@ -6,6 +6,8 @@ import { Close, Revert } from 'grommet-icons';
 import { RxDoubleArrowUp } from 'react-icons/rx';
 import styles from '../../styles/swiper.module.scss';
 import BigCard from "./BigCard";
+import jobs from "@/public/jobsData";
+
 
 // continue functions from this example: https://github.com/3DJakob/react-tinder-card-demo/blob/master/src/examples/Advanced.js
 
@@ -26,11 +28,16 @@ export default function Cards({
     // function icon () {
     //     //iconDescription[i] if true => correct icon
     // }
-
+    const [currentCard, setCurrentCard] = useState(0);
     const [showModal, setShowModal] = useState(false)
 
     const handleClick = () => {
      setShowModal(true)
+    }
+
+    function handleCurrentCard() {
+        setCurrentCard((currentCard - 1) % jobs.length);
+        console.log('clicked');
     }
 
     const icon = 'icon';
@@ -61,7 +68,7 @@ export default function Cards({
                     </div>
                     <div className={styles.text}>
                         <div className={styles.header}>
-                            <h3 className={styles.title}>{title}</h3>
+                            <h3 className={styles.title}>{jobs[currentCard].title}</h3>
                             {/*<h4 className={styles.company}>{company}</h4>*/}
                             <button className={styles.more} onClick={handleClick}>
                                 <RxDoubleArrowUp />
@@ -70,12 +77,12 @@ export default function Cards({
                         {/* this below needs logic to set right icon */}
                         <p
                             className={styles.icons}
-                        >{`${icon} ${percentajeJob}%`}</p>
+                        >{`${jobs[currentCard].icon} ${jobs[currentCard].percentajeJob}%`}</p>
                         <p>{smallDesc}</p>
                     </div>
                 </div>
                 <div className={styles.btnContainer}>
-                    <button className={styles.back}>
+                    <button className={styles.back} onClick={handleCurrentCard}>
                         <Revert />
                     </button>
                     <button className={styles.heart}>
