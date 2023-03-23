@@ -5,7 +5,7 @@ import Cards from './cards.jsx';
 import styles from '../../styles/swiper.module.scss';
 
 export default function Swiper() {
-    const [jobs, setJobs] = useState(data.slice(0, 2));
+    const [jobs, setJobs] = useState(data.slice(0, 5));
 
     const loadMoreJobs = () => {
         const currentLength = jobs.length;
