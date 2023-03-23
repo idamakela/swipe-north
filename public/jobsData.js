@@ -11,7 +11,7 @@ import nurse from './images/Nurses.jpg';
 import samhallsstrateg from './images/Samhallsstrateg.jpg';
 //import psykiatri from './images/SommarjobbSocialpshykiatri.jpg'
 import vaktmastare from './images/SommarjobbVaktmastare.jpg';
-import taxi from './images/TaxiDriver.jpg';
+/*import taxi from './images/TaxiDriver.jpg';*/
 
 /*
  * TODO:
@@ -26,7 +26,7 @@ const jobs = [
         title: 'Taxichaufför',
         profesion: 'Trasport',
         company: 'Skellefteå Taxi AB',
-        picture: taxi,
+        picture: './images/TaxiDriver.jpg',
         area: 'Skellefteå',
         iconDescription: {
             transport: true,

@@ -33,11 +33,13 @@
         justify-content: flex-start;
 
         .imgContainer {
-            max-height: 200px;
+            max-height: 220px;
+            max-width: 100%;
     
             img {
                 height: 100%;
                 width: 100%;
+                object-fit: cover;
             }
         }
     }

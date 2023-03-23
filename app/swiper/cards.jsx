@@ -55,7 +55,9 @@ export default function Cards({
                             </button>
                         </div>
                         {/* this below needs logic to set right icon */}
-                        <p className={styles.icons}>{`${icon} ${percentajeJob}%`}</p>
+                        <p
+                            className={styles.icons}
+                        >{`${icon} ${percentajeJob}%`}</p>
                         <p>{`${smallDesc}...`}</p>
                     </div>
                 </div>
