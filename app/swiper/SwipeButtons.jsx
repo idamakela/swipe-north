@@ -1,6 +1,5 @@
-import React from 'react';
-import styles from '../../styles/SwipeButtons.module.scss';
-import { FaDoorClosed, FaHeart, FaReplyAll } from 'react-icons/fa';
+import React from 'react'
+import { FaDoorClosed, FaHeart, FaReplyAll } from 'react-icons/fa'
 
 const [data, setData] = React.useState([
     { name: 'John', age: 30, email: 'john@example.com' },

@@ -1,21 +1,24 @@
 import React from "react";
 import Link from "next/link";
-// import logo from "./logo.png"
-//import styles from
+import { FaHeart } from "react-icons/fa";
+import styles from "styles/header.module.scss";
+
+
 
 export default function header(){
     return(
         <>
-        <header>
-            <div className="logo">
-                
-                {/* <Image src="logo.png" className="githubIcon" to="https://github.com/Joeyryanbridges" /> */}
-                {/* <Link href="/" className={styles['navBarLink']}>HOME</Link> */}
-                
+        <header className={styles['headerStyle']}>
+            <div className={styles['logo']}>
+            <Link href="/">
+                <img src="logo.png" alt="Skellefteå logo" style={{width: "150px"}}></img>
+            </Link>
             </div>
-            <div className="hjärta">
-
+            <Link href="/savedjobs">
+            <div className={styles['heart']}>
+                <FaHeart />
             </div>
+            </Link>
         </header>
         </>
     )
