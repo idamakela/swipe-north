@@ -11,7 +11,7 @@ export default function BigCard({
   jobbDescription,
   experience,
   aboutUs,
-  contactPerson,
+  contactEmail,
   lastDate,
   setShowModal
 }) {
@@ -37,14 +37,12 @@ export default function BigCard({
                     <h4 className={styles.subTitle}>Vi söker dig som:</h4>
                     <p className={styles.paragraph}>{jobbDescription}</p>
                     <h4 className={styles.subTitle}>Erfarenheter</h4>
-                    <ul className={styles.list}>
-                      <li className={styles.listItem}>Lifeskills</li>
-                      <li className={styles.listItem}>Knowledge</li>
-                    </ul>
+                    <p className={styles.paragraph}>{experience}</p>
                     <h4 className={styles.subTitle}>Om oss</h4>
                     <p className={styles.paragraph}>{aboutUs}</p>
                     <h4 className={styles.subTitle}>Kontaktuppgifter</h4>
-                    <h4>Sista ansökningsdatum 2023-05-04</h4>
+                    <p className={styles.paragraph}>Test@ansökhär.com</p>
+                    <h4 className={styles.last}>Sista ansökningsdatum <span className={styles.date}>2023-05-04</span></h4>
                     <button className={styles.btn}>ANSÖK HÄR!</button>
                 </div>
             

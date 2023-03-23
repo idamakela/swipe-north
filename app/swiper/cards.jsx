@@ -19,7 +19,9 @@ export default function Cards({
     percentajeJob,
     jobbDescription,
     aboutUs,
-    lastDate
+    lastDate, 
+    experience,
+    //contactEmail
 }) {
     // function icon () {
     //     //iconDescription[i] if true => correct icon
@@ -85,7 +87,16 @@ export default function Cards({
                 </div>
             </div>
             {showModal && (
-              <BigCard setShowModal={setShowModal} showModal={showModal} title={title} company={company} jobbDescription={jobbDescription} aboutUs={aboutUs} lastDate={lastDate}/>
+              <BigCard
+               setShowModal={setShowModal}
+               showModal={showModal} 
+               title={title} company={company} 
+               jobbDescription={jobbDescription} 
+               aboutUs={aboutUs} 
+               lastDate={lastDate}
+               experience={experience}
+               //contactEmail={contactEmail}
+               />
             )}
         </TinderCard>
     );
