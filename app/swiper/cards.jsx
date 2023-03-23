@@ -43,7 +43,7 @@ export default function Cards({
     const icon = 'icon';
     const fullDesc = jobbDescription;
     const words = fullDesc.split(' ');
-    const selectedWords = words.slice(0, 10);
+    const selectedWords = words.slice(0, 15);
     const smallDesc = selectedWords.join(' ');
 
     const onSwipe = (direction) => {
@@ -68,17 +68,28 @@ export default function Cards({
                     </div>
                     <div className={styles.text}>
                         <div className={styles.header}>
+<<<<<<< HEAD
                             <h3 className={styles.title}>{jobs[currentCard].title}</h3>
                             {/*<h4 className={styles.company}>{company}</h4>*/}
                             <button className={styles.more} onClick={handleClick}>
+=======
+                            <h3 className={styles.title}>{title}</h3>
+                            <h4 className={styles.company}>{company}</h4>
+                            <button className={styles.more}>
+>>>>>>> main
                                 <RxDoubleArrowUp />
                             </button>
                         </div>
                         {/* this below needs logic to set right icon */}
                         <p
                             className={styles.icons}
+<<<<<<< HEAD
                         >{`${jobs[currentCard].icon} ${jobs[currentCard].percentajeJob}%`}</p>
                         <p>{smallDesc}</p>
+=======
+                        >{`${icon} ${percentajeJob}%`}</p>
+                        <p>{`${smallDesc}...`}</p>
+>>>>>>> main
                     </div>
                 </div>
                 <div className={styles.btnContainer}>

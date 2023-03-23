@@ -1,4 +1,4 @@
-@import "variables";
+@import 'variables';
 
 .bigCard {
     background-color: $light-color;
@@ -24,8 +24,12 @@
 }
 
 .company {
+<<<<<<< HEAD
     font-size: 1.8rem;
     font-weight: 400;
+=======
+    font-size: 20px;
+>>>>>>> main
     margin: 4px 0;
 }
 
@@ -58,8 +62,9 @@
     padding: 12px 30px;
     text-transform: uppercase;
     transition: 0.25s;
-    width: 100%; 
+    width: 100%;
 }
+<<<<<<< HEAD
 
 .more {
     align-items: center;
@@ -80,3 +85,5 @@
     color: $red-color;
     font-size: 1.6rem;
 }
+=======
+>>>>>>> main

@@ -3,6 +3,7 @@ import "../styles/globals.scss";
 import Header from "./header.js"
 import Image from 'next/image'
 import backgroundImg from '../public/background.png'
+
 export const metadata = {
     title: "Swipe North",
     description: "",
@@ -14,6 +15,7 @@ const readex_pro = Readex_Pro({
 })
 
 export default function RootLayout({ children }) {
+  
   return (
     <html lang="en">
       <body className={readex_pro.className} style={{ backgroundImage: `url(${backgroundImg.src})`, backgroundSize: 'cover', backgroundRepeat: 'no-repeat', backgroundAttachment: 'fixed' }}>
