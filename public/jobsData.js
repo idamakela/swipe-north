@@ -1,9 +1,5 @@
 
-<<<<<<< HEAD
-import agilprojekledare from './images/AgilProjektledare.jpg'
-=======
 //import agilprojekledare from './images/AgilProjekledare.jpg'
->>>>>>> main
 import bistandshandlaggare from './images/Bistandshandlaggare.jpg'
 import brandman from './images/Brandman.jpg'
 import chiefengineer from './images/ChiefEngineer.jpg'
@@ -14,11 +10,7 @@ import hotelcleaner from './images/HotelCleaner.jpg'
 import kock from './images/Kock.jpg'
 import nurse from './images/Nurses.jpg'
 import samhallsstrateg from './images/Samhallsstrateg.jpg'
-<<<<<<< HEAD
-// import psykiatri from './images/SommarjobbSocialpshykiatri.jpg'
-=======
 //import psykiatri from './images/SommarjobbSocialpshykiatri.jpg'
->>>>>>> main
 import vaktmastare from './images/SommarjobbVaktmastare.jpg'
 import taxi from './images/TaxiDriver.jpg'
 
@@ -211,7 +203,7 @@ const jobs = [
       title: "Agil projektledare",
       profesion: "It-support",
       company:"Skellefteå Kommun",
-      picture: agilprojekledare,
+      picture: '' , //agilprojekledare,
       area: "Skellefteå",
       iconDescription: {
         transport: false,
@@ -235,12 +227,7 @@ const jobs = [
       id: 9,
       title: "Sommarjobb inom socialpsykiatri",
       profesion: "Vård och omsorg",
-<<<<<<< HEAD
       picture: '', //psykiatri,
-=======
-      company:"Skellefteå Kommun",
-      picture:psykiatri ,
->>>>>>> main
       area: "Skellefteå",
       iconDescription: {
         transport: false,
