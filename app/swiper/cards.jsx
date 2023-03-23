@@ -1,8 +1,8 @@
-import TinderCard from "react-tinder-card";
-import { FaHeart } from "react-icons/fa";
-import { Close, Revert } from "grommet-icons";
-import { RxDoubleArrowUp } from "react-icons/rx";
-import styles from "../../styles/swiper.module.scss";
+import TinderCard from 'react-tinder-card';
+import { FaHeart } from 'react-icons/fa';
+import { Close, Revert } from 'grommet-icons';
+import { RxDoubleArrowUp } from 'react-icons/rx';
+import styles from '../../styles/swiper.module.scss';
 
 // continue functions from this example: https://github.com/3DJakob/react-tinder-card-demo/blob/master/src/examples/Advanced.js
 
@@ -16,7 +16,6 @@ export default function Cards({
     percentajeJob,
     jobbDescription,
 }) {
-
     // function icon () {
     //     //iconDescription[i] if true => correct icon
     // }
@@ -28,15 +27,24 @@ export default function Cards({
     const smallDesc = selectedWords.join(' ');
 
     const onSwipe = (direction) => {
-        console.log('you swiped' + ' ' + direction)
-    }
+        console.log('you swiped' + ' ' + direction);
+    };
 
     return (
-        <TinderCard className={styles.swipe} key={id} preventSwipe={["down"]} onSwipe={onSwipe}>
+        <TinderCard
+            className={styles.swipe}
+            key={id}
+            preventSwipe={['down']}
+            onSwipe={onSwipe}
+        >
             <div className={styles.card}>
                 <div className={styles.upperElements}>
                     <div className={styles.imgContainer}>
-                        <img src={picture} /*alt={imgAlt}*/ height='200px' width='200px' />
+                        <img
+                            src={picture}
+                            /*alt={imgAlt}*/ height="200px"
+                            width="200px"
+                        />
                     </div>
                     <div className={styles.text}>
                         <div className={styles.header}>
@@ -47,7 +55,9 @@ export default function Cards({
                             </button>
                         </div>
                         {/* this below needs logic to set right icon */}
-                        <p className={styles.icons}>{`${icon} ${percentajeJob}%`}</p>
+                        <p
+                            className={styles.icons}
+                        >{`${icon} ${percentajeJob}%`}</p>
                         <p>{smallDesc}</p>
                     </div>
                 </div>
