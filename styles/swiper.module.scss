@@ -1,5 +1,5 @@
-@import "variables";
-@import "mixins";
+@import 'variables';
+@import 'mixins';
 
 .title {
     background-color: transparent;
@@ -32,7 +32,7 @@
     .upperElements {
         @include flex-column;
         justify-content: flex-start;
-        
+
         .imgContainer {
             max-height: 200px;
     
@@ -42,7 +42,6 @@
             }
         }
     }
-
 
     .header {
         display: grid;
