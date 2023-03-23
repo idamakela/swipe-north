@@ -24,7 +24,7 @@ export default function Cards({
     const icon = 'icon';
     const fullDesc = jobbDescription;
     const words = fullDesc.split(' ');
-    const selectedWords = words.slice(0, 10);
+    const selectedWords = words.slice(0, 15);
     const smallDesc = selectedWords.join(' ');
 
     const onSwipe = (direction) => {
@@ -48,7 +48,7 @@ export default function Cards({
                         </div>
                         {/* this below needs logic to set right icon */}
                         <p className={styles.icons}>{`${icon} ${percentajeJob}%`}</p>
-                        <p>{smallDesc}</p>
+                        <p>{`${smallDesc}...`}</p>
                     </div>
                 </div>
                 <div className={styles.btnContainer}>

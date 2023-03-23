@@ -18,7 +18,7 @@ import taxi from './images/TaxiDriver.jpg'
 * TODO:
 *   Felstavningar
 *   Psykiatri bild import
-*   Lägg company 
+*   Lägg till company 
 */
 
 

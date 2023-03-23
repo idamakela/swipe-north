@@ -34,7 +34,7 @@
         justify-content: flex-start;
         
         .imgContainer {
-            max-height: 50%;
+            max-height: 200px;
     
             img {
                 height: 100%;
@@ -47,10 +47,10 @@
     .header {
         display: grid;
         grid-template-columns: 90% 10%;
-        grid-template-rows: 1fr 1fr;
+        grid-template-rows: minmax(0, 1fr 1fr);
         grid-column-gap: 0px;
         grid-row-gap: 0px;
-        margin-top: $base-pixel;
+        margin: $base-pixel 0;
 
         .title {
             grid-area: 1 / 1 / 2 / 2;
