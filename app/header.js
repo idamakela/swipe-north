@@ -14,9 +14,11 @@ export default function header(){
                 <img src="logo.png" alt="Skellefteå logo" style={{width: "150px"}}></img>
             </Link>
             </div>
+            <Link href="/savedjobs">
             <div className={styles['heart']}>
                 <FaHeart />
             </div>
+            </Link>
         </header>
         </>
     )
