@@ -26,7 +26,7 @@ const jobs = [
     {
       id: 1,
       title: "Taxichaufför",
-      profesion: "Trasport",
+      profession: "Trasport",
       company:"Skellefteå Taxi AB",
       picture: taxi ,
       area: "Skellefteå",
@@ -51,7 +51,7 @@ const jobs = [
     {
       id: 2,
       title: "Sjuksöterska",
-      profesion: "Vård och omsorg",
+      profession: "Vård och omsorg",
       company:"Skellefteå Sjukhuset",
       picture: nurse,
       area: "Skellefteå",
@@ -76,7 +76,7 @@ const jobs = [
     {  
       id: 3,
       title: "Biståndshandläggare",
-      profesion: "Vård och omsorg",
+      profession: "Vård och omsorg",
       company:"Skellefteå Kommun",
       picture: bistandshandlaggare,
       area: "Skellefteå",
@@ -101,7 +101,7 @@ const jobs = [
     {  
       id: 4,
       title: "Rektor",
-      profesion: "Utbildning",
+      profession: "Utbildning",
       company:"Lejonström anpassad grundskola",
       picture: forskolarektor ,
       area: "Skellefteå",
@@ -126,7 +126,7 @@ const jobs = [
     {  
       id: 5,
       title: "Samhällsstrateg",
-      profesion: "Administration",
+      profession: "Administration",
       company:"Skelleftå Kommun",
       picture: samhallsstrateg,
       area: "Skellefteå",
@@ -151,7 +151,7 @@ const jobs = [
     {  
       id: 6,
       title: "Förskollärare",
-      profesion: "Utbildning",
+      profession: "Utbildning",
       company:"Kågeskola",
       picture: forskollarare,
       area: "Skellefteå",
@@ -176,7 +176,7 @@ const jobs = [
      {  
       id: 7,
       title: "Kock",
-      profesion: "restaurang",
+      profession: "restaurang",
       company:"Kågeskola",
       picture: kock,
       area: "Skellefteå",
@@ -201,7 +201,7 @@ const jobs = [
      {  
       id: 8,
       title: "Agil projektledare",
-      profesion: "It-support",
+      profession: "It-support",
       company:"Skellefteå Kommun",
       picture: '' , //agilprojekledare,
       area: "Skellefteå",
@@ -226,7 +226,7 @@ const jobs = [
      {  
       id: 9,
       title: "Sommarjobb inom socialpsykiatri",
-      profesion: "Vård och omsorg",
+      profession: "Vård och omsorg",
       picture: '', //psykiatri,
       area: "Skellefteå",
       iconDescription: {
@@ -250,7 +250,7 @@ const jobs = [
      {  
       id: 10,
       title: "Sommarjobb - Vaktmästare",
-      profesion: "Underhåll",
+      profession: "Underhåll",
       company:"Skellefteå Kommun",
       picture: vaktmastare,
       area: "Skellefteå",
@@ -275,7 +275,7 @@ const jobs = [
      {  
       id: 11,
       title: "Brandmän",
-      profesion: "Säkerhetsarbete",
+      profession: "Säkerhetsarbete",
       company:"Skellefteå Kommun",
       picture: brandman,
       area: "Skellefteå",
@@ -300,7 +300,7 @@ const jobs = [
      {  
       id: 12,
       title: "Hotellstäd",
-      profesion: "Restaurang",
+      profession: "Restaurang",
       company:"Lövånger Gården",
       picture: hotelcleaner,
       area: "Skellefteå",
@@ -325,7 +325,7 @@ const jobs = [
     {  
       id: 13,
       title: "Chief Engineeer Plant & Piping",
-      profesion: "konstruktör, tillverkningsindustri",
+      profession: "konstruktör, tillverkningsindustri",
       company:"Poolia Sverige AB",
       picture: chiefengineer,
       area: "Skellefteå",
@@ -350,7 +350,7 @@ const jobs = [
     {  
       id: 14,
       title: "Senior fullstackutvecklare",
-      profesion: "It-consult",
+      profession: "It-consult",
       company:"PersonalExpressen AB",
       picture: fullstackutvecklare,
       area: "Skellefteå",

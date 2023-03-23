@@ -1,6 +1,6 @@
 import React from "react";
 import Link from "next/link";
-import { FaHeart } from "react-icons/fa";
+import { FaHeart, FaGlobe } from "react-icons/fa";
 import styles from "styles/header.module.scss";
 
 
@@ -14,11 +14,12 @@ export default function header(){
                 <img src="logo.png" alt="Skellefteå logo" style={{width: "150px"}}></img>
             </Link>
             </div>
-            <Link href="/savedjobs">
             <div className={styles['heart']}>
+                <Link href="/savedjobs">
                 <FaHeart />
-            </div>
-            </Link>
+                </Link>
+                <FaGlobe />
+            </div>  
         </header>
         </>
     )

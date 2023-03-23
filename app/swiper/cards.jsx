@@ -1,8 +1,11 @@
+"use client";
+import { useState } from "react";
 import TinderCard from 'react-tinder-card';
 import { FaHeart } from 'react-icons/fa';
 import { Close, Revert } from 'grommet-icons';
 import { RxDoubleArrowUp } from 'react-icons/rx';
 import styles from '../../styles/swiper.module.scss';
+import BigCard from "./BigCard";
 
 // continue functions from this example: https://github.com/3DJakob/react-tinder-card-demo/blob/master/src/examples/Advanced.js
 
@@ -11,14 +14,22 @@ export default function Cards({
     picture,
     /*imgAlt,*/
     title,
-    /*company,*/
+    company,
     iconDescription,
     percentajeJob,
     jobbDescription,
+    aboutUs,
+    lastDate
 }) {
     // function icon () {
     //     //iconDescription[i] if true => correct icon
     // }
+
+    const [showModal, setShowModal] = useState(false)
+
+    const handleClick = () => {
+     setShowModal(true)
+    }
 
     const icon = 'icon';
     const fullDesc = jobbDescription;
@@ -50,7 +61,7 @@ export default function Cards({
                         <div className={styles.header}>
                             <h3 className={styles.title}>{title}</h3>
                             {/*<h4 className={styles.company}>{company}</h4>*/}
-                            <button className={styles.more}>
+                            <button className={styles.more} onClick={handleClick}>
                                 <RxDoubleArrowUp />
                             </button>
                         </div>
@@ -73,6 +84,9 @@ export default function Cards({
                     </button>
                 </div>
             </div>
+            {showModal && (
+              <BigCard setShowModal={setShowModal} showModal={showModal} title={title} company={company} jobbDescription={jobbDescription} aboutUs={aboutUs} lastDate={lastDate}/>
+            )}
         </TinderCard>
     );
 }
