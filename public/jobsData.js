@@ -1,3 +1,17 @@
+//import agilprojekledare from './images/AgilProjekledare.jpg'
+import bistandshandlaggare from './images/Bistandshandlaggare.jpg';
+import brandman from './images/Brandman.jpg';
+import chiefengineer from './images/ChiefEngineer.jpg';
+import forskolarektor from './images/ForskolaRektor.jpg';
+import forskollarare from './images/Forskollarare.jpg';
+import fullstackutvecklare from './images/Fullstackutvecklare.jpg';
+import hotelcleaner from './images/HotelCleaner.jpg';
+import kock from './images/Kock.jpg';
+import nurse from './images/Nurses.jpg';
+import samhallsstrateg from './images/Samhallsstrateg.jpg';
+//import psykiatri from './images/SommarjobbSocialpshykiatri.jpg'
+import vaktmastare from './images/SommarjobbVaktmastare.jpg';
+/*import taxi from './images/TaxiDriver.jpg';*/
 
 import agilprojekledare from './images/agil.jpg'
 import bistandshandlaggare from './images/Bistandshandlaggare.jpg'

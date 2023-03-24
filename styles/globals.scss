@@ -1,20 +1,24 @@
-
+@import './normalize.scss';
 @import url('https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@300;400;500;700;900&display=swap');
-@import "variables";
+@import 'variables';
+
+:root {
+    font-size: 10px;
+    color-scheme: only light;
+    margin: 0;
+    padding: 0;
+}
 
 * {
     box-sizing: border-box;
 }
 
-html {
-    height: 100vh;
-}
-
 body {
     background-color: $light-green;
     height: 100%;
-  }
+}
 
-  a {
+a {
     text-decoration: none;
-  }
+    color: inherit;
+}

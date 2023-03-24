@@ -12,11 +12,13 @@ export default function header(){
                     <img src="logo.png" alt="Skellefteå logo" style={{width: "150px"}}></img>
                 </Link>
             </div>
+            <Link href="/savedjobs">
             <div className={styles['heart']}>
                 <Link href="/savedjobs">
                 <FaHeart />
                 </Link>
             </div>
+            </Link>
         </header>
         </>
     )
