@@ -3,8 +3,6 @@ import Link from "next/link";
 import { FaHeart } from "react-icons/fa";
 import styles from "styles/header.module.scss";
 
-
-
 export default function header(){
     return(
         <>

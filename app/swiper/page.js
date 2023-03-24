@@ -1,29 +1,30 @@
-"use client";
-import { useState } from "react";
-import Cards from "./cards";
-import styles from "../../styles/swiper.module.scss";
+'use client';
+import { useState } from 'react';
+import Cards from './cards';
+import styles from '../../styles/swiper.module.scss';
+import Filter from '../filter';
 
 export default function Swiper() {
     const [job, setJob] = useState([
         {
             id: 1,
-            img: "",
-            alt: "img alt",
-            title: "caffis",
-            company: "byrå",
-            icon: "travel",
+            img: '',
+            alt: 'img alt',
+            title: 'caffis',
+            company: 'byrå',
+            icon: 'travel',
             type: 100,
-            desc: "hdjks fsdkjöahf djsiaöjfeia öjsdöjfieö ajfdköasf jei sjdklöf jeisa ö",
+            desc: 'hdjks fsdkjöahf djsiaöjfeia öjsdöjfieö ajfdköasf jei sjdklöf jeisa ö',
         },
         {
             id: 2,
-            img: "",
-            alt: "img alt",
-            title: "chef",
-            company: "max",
-            icon: "office",
+            img: '',
+            alt: 'img alt',
+            title: 'chef',
+            company: 'max',
+            icon: 'office',
             type: 100,
-            desc: "hdjks fsdkjöahf djsiaöjfeia öjsdöjfieö ajfdköasf jei sjdklöf jeisa ö",
+            desc: 'hdjks fsdkjöahf djsiaöjfeia öjsdöjfieö ajfdköasf jei sjdklöf jeisa ö',
         },
     ]);
 
@@ -32,7 +33,7 @@ export default function Swiper() {
     return (
         <>
             <div className={styles.title}>
-                <h2>this is filter "menu"</h2>
+                <Filter />  
             </div>
             <div className={styles.cardsContainer}>
                 {job.map((job) => (

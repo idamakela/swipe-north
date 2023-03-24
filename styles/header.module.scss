@@ -1,4 +1,4 @@
-@import 'variables';
+@import "variables";
 @import 'mixins';
 
 .headerStyle {
@@ -9,8 +9,12 @@
     .heart {
     font-size: 40px;
     }
+
+    a {
+        color: $dark-color;
+        text-decoration: none;
+    }
 }
 
-.linkstyle {
-    text-decoration: none;
-}
+
+
