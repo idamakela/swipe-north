@@ -1,7 +1,7 @@
 import React from 'react'
 import { RxDoubleArrowDown } from "react-icons/rx";
 import styles from '../../styles/BigCard.module.scss'
-//import jobs from '@/public/jobsData';
+import jobs from '@/public/jobsData';
 
 export default function BigCard({
   id,
@@ -13,12 +13,15 @@ export default function BigCard({
   aboutUs,
   contactEmail,
   lastDate,
-  setShowModal
+  setShowModal,
+  currentJobIndex,
+  setCurrentJobIndex
 }) {
 
   const handleClick = () => {
     setShowModal(false)
 }
+
 
   return (
     <div className={styles.bigCard} key={id}>

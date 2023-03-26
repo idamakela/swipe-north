@@ -28,17 +28,23 @@ export default function Cards({
     // function icon () {
     //     //iconDescription[i] if true => correct icon
     // }
-    const [currentCard, setCurrentCard] = useState(0);
+    const [currentJobIndex, setCurrentJobIndex] = useState(0);
     const [showModal, setShowModal] = useState(false)
 
     const handleClick = () => {
      setShowModal(true)
     }
 
-    function handleCurrentCard() {
-        setCurrentCard((currentCard - 1) % jobs.length);
-        console.log('clicked');
-    }
+    const handleNextClick = () => {
+      setCurrentJobIndex(currentJobIndex + 1);
+    };
+  
+    const handlePrevClick = () => {
+      setCurrentJobIndex(currentJobIndex - 1);
+    };
+  
+    const currentJob = jobs[currentJobIndex];
+  
 
     const icon = 'icon';
     const fullDesc = jobbDescription;
@@ -55,8 +61,7 @@ export default function Cards({
             className={styles.swipe}
             key={id}
             preventSwipe={['down']}
-            onSwipe={onSwipe}
-        >
+            onSwipe={onSwipe}>
             <div className={styles.card}>
                 <div className={styles.upperElements}>
                     <div className={styles.imgContainer}>
@@ -68,44 +73,34 @@ export default function Cards({
                     </div>
                     <div className={styles.text}>
                         <div className={styles.header}>
-<<<<<<< HEAD
-                            <h3 className={styles.title}>{jobs[currentCard].title}</h3>
-                            {/*<h4 className={styles.company}>{company}</h4>*/}
+                            <h3 className={styles.title}>{currentJob.title}</h3>
+                            <h4 className={styles.company}>{currentJob.company}</h4>
                             <button className={styles.more} onClick={handleClick}>
-=======
-                            <h3 className={styles.title}>{title}</h3>
-                            <h4 className={styles.company}>{company}</h4>
-                            <button className={styles.more}>
->>>>>>> main
                                 <RxDoubleArrowUp />
                             </button>
                         </div>
                         {/* this below needs logic to set right icon */}
                         <p
-                            className={styles.icons}
-<<<<<<< HEAD
-                        >{`${jobs[currentCard].icon} ${jobs[currentCard].percentajeJob}%`}</p>
-                        <p>{smallDesc}</p>
-=======
-                        >{`${icon} ${percentajeJob}%`}</p>
-                        <p>{`${smallDesc}...`}</p>
->>>>>>> main
+                            className={styles.icons}>{`${currentJob.icon} ${currentJob.percentajeJob}%`}</p>
+                        <p>{`${currentJob.smallDesc}...`}</p>
                     </div>
                 </div>
                 <div className={styles.btnContainer}>
-                    <button className={styles.back} onClick={handleCurrentCard}>
+                    <button className={styles.back} disabled={currentJobIndex === 0} onClick={handlePrevClick}>
                         <Revert />
                     </button>
                     <button className={styles.heart}>
                         <FaHeart />
                     </button>
-                    <button className={styles.remove}>
+                    <button className={styles.remove}  disabled={currentJobIndex === jobs.length - 1} onClick={handleNextClick}>
                         <Close />
                     </button>
                 </div>
             </div>
             {showModal && (
               <BigCard
+               currentJob={currentJobIndex}
+               setCurrentJobIndex={setCurrentJobIndex}
                setShowModal={setShowModal}
                showModal={showModal} 
                title={title} company={company} 
