@@ -99,8 +99,7 @@ export default function Cards({
             </div>
             {showModal && (
               <BigCard
-               currentJob={currentJobIndex}
-               setCurrentJobIndex={setCurrentJobIndex}
+               job={currentJob}
                setShowModal={setShowModal}
                showModal={showModal} 
                title={title} company={company} 
