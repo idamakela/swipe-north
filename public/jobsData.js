@@ -1,32 +1,3 @@
-//import agilprojekledare from './images/AgilProjekledare.jpg'
-import bistandshandlaggare from './images/Bistandshandlaggare.jpg';
-import brandman from './images/Brandman.jpg';
-import chiefengineer from './images/ChiefEngineer.jpg';
-import forskolarektor from './images/ForskolaRektor.jpg';
-import forskollarare from './images/Forskollarare.jpg';
-import fullstackutvecklare from './images/Fullstackutvecklare.jpg';
-import hotelcleaner from './images/HotelCleaner.jpg';
-import kock from './images/Kock.jpg';
-import nurse from './images/Nurses.jpg';
-import samhallsstrateg from './images/Samhallsstrateg.jpg';
-//import psykiatri from './images/SommarjobbSocialpshykiatri.jpg'
-import vaktmastare from './images/SommarjobbVaktmastare.jpg';
-/*import taxi from './images/TaxiDriver.jpg';*/
-
-import agilprojekledare from './images/agil.jpg'
-import bistandshandlaggare from './images/Bistandshandlaggare.jpg'
-import brandman from './images/Brandman.jpg'
-import chiefengineer from './images/ChiefEngineer.jpg'
-import forskolarektor from './images/ForskolaRektor.jpg'
-import forskollarare from './images/Forskollarare.jpg'
-import fullstackutvecklare from './images/Fullstackutvecklare.jpg'
-import hotelcleaner from './images/HotelCleaner.jpg'
-import kock from './images/Kock.jpg'
-import nurse from './images/Nurses.jpg'
-import samhallsstrateg from './images/Samhallsstrateg.jpg'
-import psykiatri from './images/psykiatri.jpg'
-import vaktmastare from './images/SommarjobbVaktmastare.jpg'
-import taxi from './images/TaxiDriver.jpg'
 
 const jobs = [
     {
@@ -34,7 +5,7 @@ const jobs = [
       title: "Taxichaufför",
       profession: "Trasport",
       company:"Skellefteå Taxi AB",
-      picture: taxi ,
+      picture: './images/TaxiDriver.jpg' ,
       area: "Skellefteå",
       iconDescription: {
         transport: true,
@@ -59,7 +30,7 @@ const jobs = [
       title: "Sjuksöterska",
       profession: "Vård och omsorg",
       company:"Skellefteå Sjukhuset",
-      picture: nurse,
+      picture: './images/Nurses.jpg',
       area: "Skellefteå",
       iconDescription: {
         transport: false,
@@ -84,7 +55,7 @@ const jobs = [
       title: "Biståndshandläggare",
       profession: "Vård och omsorg",
       company:"Skellefteå Kommun",
-      picture: bistandshandlaggare,
+      picture: './images/Bistandshandlaggare.jpg',
       area: "Skellefteå",
       iconDescription: {
         transport: false,
@@ -109,7 +80,7 @@ const jobs = [
       title: "Rektor",
       profession: "Utbildning",
       company:"Lejonström anpassad grundskola",
-      picture: forskolarektor ,
+      picture: './images/ForskolaRektor.jpg',
       area: "Skellefteå",
       iconDescription: {
         transport: false,
@@ -134,7 +105,7 @@ const jobs = [
       title: "Samhällsstrateg",
       profession: "Administration",
       company:"Skelleftå Kommun",
-      picture: samhallsstrateg,
+      picture: './images/Samhallsstrateg.jpg',
       area: "Skellefteå",
       iconDescription: {
         transport: false,
@@ -159,7 +130,7 @@ const jobs = [
       title: "Förskollärare",
       profession: "Utbildning",
       company:"Kågeskola",
-      picture: forskollarare,
+      picture: './images/Forskollarare.jpg',
       area: "Skellefteå",
       iconDescription: {
         transport: false,
@@ -184,7 +155,7 @@ const jobs = [
       title: "Kock",
       profession: "restaurang",
       company:"Kågeskola",
-      picture: kock,
+      picture: './images/Kock.jpg' ,
       area: "Skellefteå",
       iconDescription: {
         transport: false,
@@ -209,7 +180,7 @@ const jobs = [
       title: "Agil projektledare",
       profession: "It-support",
       company:"Skellefteå Kommun",
-      picture: agilprojekledare,
+      picture: './images/agil.jpg',
       area: "Skellefteå",
       iconDescription: {
         transport: false,
@@ -234,7 +205,7 @@ const jobs = [
       title: "Sommarjobb inom socialpsykiatri",
       profession: "Vård och omsorg",
       company:"Skellefteå Kommun",
-      picture:psykiatri ,
+      picture:'./images/psykiatri.jpg',
       area: "Skellefteå",
       iconDescription: {
         transport: false,
@@ -259,7 +230,7 @@ const jobs = [
       title: "Sommarjobb - Vaktmästare",
       profession: "Underhåll",
       company:"Skellefteå Kommun",
-      picture: vaktmastare,
+      picture:'./images/SommarjobbVaktmastare.jpg',
       area: "Skellefteå",
       iconDescription: {
         transport: false,
@@ -284,7 +255,7 @@ const jobs = [
       title: "Brandmän",
       profession: "Säkerhetsarbete",
       company:"Skellefteå Kommun",
-      picture: brandman,
+      picture: './images/Brandman.jpg',
       area: "Skellefteå",
       iconDescription: {
         transport: false,
@@ -309,7 +280,7 @@ const jobs = [
       title: "Hotellstäd",
       profession: "Restaurang",
       company:"Lövånger Gården",
-      picture: hotelcleaner,
+      picture: './images/HotelCleaner.jpg',
       area: "Skellefteå",
       iconDescription: {
         transport: false,
@@ -334,7 +305,7 @@ const jobs = [
       title: "Chief Engineeer Plant & Piping",
       profession: "konstruktör, tillverkningsindustri",
       company:"Poolia Sverige AB",
-      picture: chiefengineer,
+      picture: './images/ChiefEngineer.jpg',
       area: "Skellefteå",
       iconDescription: {
         transport: false,
@@ -359,7 +330,7 @@ const jobs = [
       title: "Senior fullstackutvecklare",
       profession: "It-consult",
       company:"PersonalExpressen AB",
-      picture: fullstackutvecklare,
+      picture: './images/Fullstackutvecklare.jpg',
       area: "Skellefteå",
       iconDescription: {
         transport: false,

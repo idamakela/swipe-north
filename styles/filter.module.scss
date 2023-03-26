@@ -5,16 +5,19 @@
     @include flex-column;
     align-items: center;
     margin-top: 2vh;
+
     .selector {
     border-radius: 10px;
     height: 20px;
     width: 600px;
     padding: 20px;
     max-width: 90vw; 
-    }
+    
     option {
-        
+        width: 600px; 
+        max-width: 90vw; 
         
     }
-
+    
+    }
 }
