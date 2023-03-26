@@ -42,10 +42,14 @@ export default function Cards({
     const handlePrevClick = () => {
       setCurrentJobIndex(currentJobIndex - 1);
     };
-  
-    const currentJob = jobs[currentJobIndex];
-  
 
+    const handleSaveClick = () => {
+        const currentJob = jobs[currentJobIndex];
+        localStorage.setItem(currentJob.id, JSON.stringify(currentJob));
+        console.log(currentJob)
+      };
+
+    const currentJob = jobs[currentJobIndex];
     const icon = 'icon';
     const fullDesc = jobbDescription;
     const words = fullDesc.split(' ');
@@ -89,7 +93,7 @@ export default function Cards({
                     <button className={styles.back} disabled={currentJobIndex === 0} onClick={handlePrevClick}>
                         <Revert />
                     </button>
-                    <button className={styles.heart}>
+                    <button className={styles.heart} onClick={handleSaveClick}>
                         <FaHeart />
                     </button>
                     <button className={styles.remove}  disabled={currentJobIndex === jobs.length - 1} onClick={handleNextClick}>
