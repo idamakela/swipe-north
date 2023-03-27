@@ -24,6 +24,7 @@ function SavedJobs() {
 
   return (
     <>
+    <h1 className={styles.title}>Saved Jobs</h1>
     <div className={styles.savedJobsContainer}>
       {savedJobs.map(job => (
         <div className={styles.savedJobsList} key={job.id}>
