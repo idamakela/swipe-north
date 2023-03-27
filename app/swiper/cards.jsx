@@ -44,10 +44,10 @@ export default function Cards({
     };
 
     const handleSaveClick = () => {
-        const currentJob = jobs[currentJobIndex];
-        localStorage.setItem(currentJob.id, JSON.stringify(currentJob));
+        localStorage.setItem('savedJob', JSON.stringify(jobs[currentJobIndex]));
         console.log(currentJob)
       };
+      
 
     const currentJob = jobs[currentJobIndex];
     const icon = 'icon';

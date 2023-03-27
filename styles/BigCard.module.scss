@@ -3,15 +3,13 @@
 .bigCard {
     background-color: $light-color;
     border-radius: 10px;
+    bottom: 65vh;
     box-shadow: 0px 18px 53px 0px rgba(0, 0, 0, 0.3);
-    min-height: 650px;
-    left: 0;
-    right: 0;
+    min-height: 600px;
     margin: 8px auto;
-    max-width: 360px;
     padding: 40px;
-    position: absolute;
-    top: 20vh;
+    position: relative;
+    width: 100%;
 }
 
 .mainInfo {
