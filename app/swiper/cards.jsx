@@ -6,7 +6,6 @@ import styles from '../../styles/swiper.module.scss';
 // continue functions from this example: https://github.com/3DJakob/react-tinder-card-demo/blob/master/src/examples/Advanced.js
 
 export default function Cards({
-    id,
     picture,
     /*imgAlt,*/
     title,
@@ -15,25 +14,37 @@ export default function Cards({
     percentajeJob,
     jobbDescription,
 }) {
-    // function icon () {
-    //     //iconDescription[i] if true => correct icon
-    // }
 
+    //placeholder medans nedan
     const icon = 'icon';
+
+    function iconVar () {
+        //iconDescription[i] if true => correct icon
+        switch (true) {
+            case iconDescription.transport:
+                //icon for transport
+                break;
+            case iconDescription.remote:
+                //icon for remote
+                break;
+            case iconDescription.local:
+                //icon for local/office
+                break;
+            case iconDescription.hybrid:
+                //icon for hybrid
+                break;
+            default:
+                //icon for default
+        }
+    }
 
     const fullDesc = jobbDescription;
     const words = fullDesc.split(' ');
     const selectedWords = words.slice(0, 15);
     const smallDesc = selectedWords.join(' ');
 
-    /*
-    const onSwipe = (direction) => {
-        console.log('you swiped' + ' ' + direction);
-    };
-    */
-
     return (
-        <div key={id} className={styles.card}>
+        <div className={styles.card}>
             <div className={styles.upperElements}>
                 <div className={styles.imgContainer}>
                     <img
@@ -50,7 +61,6 @@ export default function Cards({
                             <RxDoubleArrowUp />
                         </button>
                     </div>
-                    {/* this below needs logic to set right icon */}
                     <p
                         className={styles.icons}
                     >{`${icon} ${percentajeJob}%`}</p>
