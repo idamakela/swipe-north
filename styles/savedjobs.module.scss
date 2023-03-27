@@ -23,6 +23,7 @@
     color: #fff;
     font-size: 1.6rem;
     padding: 12px 30px;
+    position: relative;
     text-transform: uppercase;
     transition: 0.25s;
     width: 100%;
@@ -37,4 +38,12 @@
 .title {
     text-align: center;
     font-size: 36px;
+}
+
+.paragraph {
+    background-color: #fff;
+    font-size: 16px;
+    margin: 0;
+    padding: 8px;
+    text-align: center;
 }

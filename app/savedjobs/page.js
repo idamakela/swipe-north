@@ -3,15 +3,20 @@ import React, { useState, useEffect } from 'react';
 import styles from '../../styles/savedjobs.module.scss'
 
 function ClearLocalStorage() {
+  const [cleared, setCleared] = useState(false);
+
   const handleClearClick = () => {
     localStorage.clear();
+    setCleared(true);
   };
 
   return (
-    <button className={styles.clearBtn} onClick={handleClearClick}>Clear localStorage</button>
+    <div>
+      <button className={styles.clearBtn} onClick={handleClearClick}>Clear List</button>
+      {cleared && <p className={styles.paragraph} >List has been cleared, reload page.</p>}
+    </div>
   );
 }
-
 function SavedJobs() {
   const [savedJobs, setSavedJobs] = useState([]);
 
@@ -40,8 +45,9 @@ function SavedJobs() {
           </div>
         </div>
       ))}
+      <ClearLocalStorage />
     </div>
-    <ClearLocalStorage />
+    
     </>
   );
 }

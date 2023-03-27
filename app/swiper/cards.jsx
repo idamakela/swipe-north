@@ -44,7 +44,7 @@ export default function Cards({
     };
 
     const handleSaveClick = () => {
-        localStorage.setItem('savedJob', JSON.stringify(jobs[currentJobIndex]));
+        localStorage.setItem(currentJob.id, JSON.stringify(jobs[currentJobIndex]));
         console.log(currentJob)
       };
       
