@@ -1,10 +1,19 @@
-import TinderCard from 'react-tinder-card';
+// import TinderCard from 'react-tinder-card';
 import { FaHeart } from 'react-icons/fa';
 import { Close, Revert } from 'grommet-icons';
 import { RxDoubleArrowUp } from 'react-icons/rx';
 import styles from '../../styles/swiper.module.scss';
 
+import dynamic from 'next/dynamic';
+
+const TinderCard = dynamic(
+  () => import('react-tinder-card'),
+  { ssr: false }
+);
 // continue functions from this example: https://github.com/3DJakob/react-tinder-card-demo/blob/master/src/examples/Advanced.js
+
+// Use DynamicComponentWithNoSSR instead of react-tinder-card
+
 
 export default function Cards({
     id,
