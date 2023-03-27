@@ -8,14 +8,14 @@ import styles from "styles/header.module.scss";
 export default function header(){
     return(
         <>
-        <header className={styles['headerStyle']}>
-            <div className={styles['logo']}>
+        <header className={styles.headerStyle}>
+            <div className={styles.logo}>
             <Link href="/">
-                <img src="logo.png" alt="Skellefteå logo" style={{width: "150px"}}></img>
+                <img src="logo.png" alt="Skellefteå logo" style={{height:"50px"}}></img>
             </Link>
             </div>
             <Link href="/savedjobs">
-            <div className={styles['heart']}>
+            <div className={styles.heart}>
                 <FaHeart />
             </div>
             </Link>
