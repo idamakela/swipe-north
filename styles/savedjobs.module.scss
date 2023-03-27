@@ -1,7 +1,7 @@
 @import 'variables';
 
 .savedJobsContainer {
-    margin-top: 5vh;
+    margin-top: 3vh;
 }
 
 .savedJobsList {
@@ -13,12 +13,13 @@
 }
 
 .bigImg {
-    height: 150px;
-    width: 150px;
+    border-radius: 5px;
+    height: 120px;
+    width: 120px;
 }
 
 .clearBtn {
-    background: linear-gradient(45deg, $dark-green, $light-green);
+    background-color: $red-color;
     border: none;
     color: #fff;
     font-size: 1.6rem;
@@ -33,11 +34,32 @@
     display: flex;
     flex-direction: column;
     justify-content: space-between;
+    width: 100%;
+}
+
+.innerText {
+    display: flex;
+    justify-content: space-between;
 }
 
 .title {
     text-align: center;
     font-size: 36px;
+}
+
+.jobTitle {
+    font-size: 18px;
+    margin: 0;
+}
+
+.company {
+    font-size: 14px;
+    margin: 4px 0;
+}
+
+.close {
+    font-size: 16px;
+    font-weight: 600;
 }
 
 .paragraph {
@@ -47,3 +69,4 @@
     padding: 8px;
     text-align: center;
 }
+

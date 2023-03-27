@@ -2,21 +2,6 @@
 import React, { useState, useEffect } from 'react';
 import styles from '../../styles/savedjobs.module.scss'
 
-function ClearLocalStorage() {
-  const [cleared, setCleared] = useState(false);
-
-  const handleClearClick = () => {
-    localStorage.clear();
-    setCleared(true);
-  };
-
-  return (
-    <div>
-      <button className={styles.clearBtn} onClick={handleClearClick}>Clear List</button>
-      {cleared && <p className={styles.paragraph} >List has been cleared, reload page.</p>}
-    </div>
-  );
-}
 function SavedJobs() {
   const [savedJobs, setSavedJobs] = useState([]);
 
@@ -26,6 +11,11 @@ function SavedJobs() {
       setSavedJobs(savedJobsData);
     }
   }, []);
+
+  const handleClickClose = (id) => {
+    localStorage.removeItem(id);
+    setSavedJobs(prevJobs => prevJobs.filter(job => job.id !== id));
+  };
 
   return (
     <>
@@ -37,15 +27,17 @@ function SavedJobs() {
             <img className={styles.bigImg} src={job.picture} /*alt={imgAlt}*/ height="200px" width="200px"/>
           </div>
           <div className={styles.infoContainer}>
-            <div>
-              <h2>{job.title}</h2>
-              <h4>{job.company}</h4>
+            <div className={styles.innerText}>
+              <div>
+                <h2 className={styles.jobTitle}>{job.title}</h2>
+                <h4 className={styles.company}>{job.company}</h4>
+              </div>
+              <div onClick={() => handleClickClose(job.id)} className={styles.close}>⊗</div>
             </div>
             <h4 className={styles.icons}>{`${job.icon} ${job.percentajeJob}%`}</h4>
           </div>
         </div>
       ))}
-      <ClearLocalStorage />
     </div>
     
     </>
