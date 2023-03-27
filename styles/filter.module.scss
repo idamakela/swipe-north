@@ -8,16 +8,19 @@
 
     .selector {
     border-radius: 10px;
-    height: 20px;
-    width: 600px;
-    padding: 20px;
+    height: 40px;
+    width: 300px;
+    font-size: medium;
     max-width: 90vw; 
     
     option {
-        width: 600px; 
+        width: 00px; 
         max-width: 90vw; 
-        
+        background-color: $light-yellow;
+        margin: 10px;
+        padding: $base-pixel;
     }
+
     
     }
 }

@@ -5,6 +5,7 @@
     @include flex-row;
     justify-content: space-between;
     align-items: center;
+    padding: $base-pixel;
 
     .heart {
     font-size: 40px;
