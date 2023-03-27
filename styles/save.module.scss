@@ -1,13 +1,8 @@
 @import 'variables';
-.main {
-    min-height: 100vh;
-    }
-
-    .section{
-        padding: 4rem 0 2rem;
-    }
-
-   
-    .section {
-        padding: 4rem 0 2rem;
-    }
+.job-card {
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  padding: 10px;
+  margin-bottom: 10px;
+  box-shadow: 2px 2px 2px #ccc;
+}

@@ -8,7 +8,7 @@ import styles from "../../styles/swiper.module.scss";
 import BigCard from "./BigCard";
 
 
-// continue functions from this example: https://github.com/3DJakob/react-tinder-card-demo/blob/master/src/examples/Advanced.js
+//continue functions from this example: https://github.com/3DJakob/react-tinder-card-demo/blob/master/src/examples/Advanced.js
 
 export default function Cards({
     id,
