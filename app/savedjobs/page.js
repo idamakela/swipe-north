@@ -18,7 +18,6 @@ function SavedJobs() {
   };
 
   return (
-<<<<<<< HEAD
     <>
     <h1 className={styles.title}>Saved Jobs</h1>
     <div className={styles.savedJobsContainer}>
@@ -42,17 +41,6 @@ function SavedJobs() {
     </div>
     </>
   );
-=======
-    <section className='main container section'>
-      <div className='secTitle'>
-        <h3 className='titl'>
-         
-        </h3>
-       
-      </div>
-    </section>
-  )
->>>>>>> 9a2fd0a7b09e658670b86184d88bad96deee99cc
 }
 
 export default SavedJobs;

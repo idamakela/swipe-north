@@ -72,7 +72,7 @@ export default function Cards({
                 <div className={styles.upperElements}>
                     <div className={styles.imgContainer}>
                         <img
-                            src={picture}
+                            src={currentJob.picture}
                             /*alt={imgAlt}*/ height="200px"
                             width="200px"
                         />
