@@ -1,56 +1,49 @@
-"use client";
+"use client"
+import React, { useState } from 'react';
+import styles from '../../styles/savedjobs.module.scss';
 
-import styles from "../../styles/save.module.scss";
+const SaveJob = () => {
+  const [title, setTitle] = useState('');
+  const [location, setLocation] = useState('');
+  const [data, setData] = useState([]);
+  const [image, setImage] = useState('');
 
-import { useState } from "react";
+  const handleSubmit = (e) => {
+    e.preventDefault();
+    // your code to save the job goes here
+  };
 
+  const handleChangeTitle = (e) => {
+    setTitle(e.target.value);
+  };
 
-export default function Save  ()  {
-  const [cards,setcard] = useState ([
+  const handleChangeLocation = (e) => {
+    setLocation(e.target.value);
+  };
 
-    {
-      title:'id-1',
-      Text:'taxi AB'
-
-    },
-
-    {
-      title:'id-2',
-      Text:'taxi AB'
-
-    },
-    {
-      title:'id-3',
-      Text:'taxi AB'
-
-    },
-
-
-  ])
+  const handleChangeImage = (e) => {
+    setImage(e.target.value);
+  };
 
   return (
-    <div >
-      <section className={styles.section}>
-        <div className={styles.containers}>
-          <h3>SPARANDE JOB</h3>
-          <div className={styles.cards}>
-            {
-              cards.map((job, i) => (
-                <div key={job.id} {...job}>
-              <h3>{job.title}</h3>
-              <p>{ cards.Text}</p>
-            </div> 
-
-              ))
-            }
-            
-          </div>
+    <div className={styles.container}>
+      <form onSubmit={handleSubmit}>
+        <div className={styles.box}>
+          <label htmlFor="title">Title</label>
+          <input id="title" type="text" value={title} onChange={handleChangeTitle} />
         </div>
-      </section>
+        <div className={styles.box}>
+          <label htmlFor="location">Location</label>
+          <input id="location" type="text" value={location} onChange={handleChangeLocation} />
+        </div>
+        <div className={styles.box}>
+          <label htmlFor="image">Image</label>
+          <input id="image" type="file" value={image} onChange={handleChangeImage} />
+        </div>
+        <button type="submit">Save Job</button>
+      </form>
     </div>
   );
-}
+};
 
-
-
-
+export default SaveJob;
