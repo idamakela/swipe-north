@@ -24,7 +24,7 @@ function SavedJobs() {
       {savedJobs.map(job => (
         <div className={styles.savedJobsList} key={job.id}>
           <div className={styles.imgContainer}>
-            <img className={styles.bigImg} src={job.picture} /*alt={imgAlt}*/ height="200px" width="200px"/>
+            <img className={styles.bigImg} src={job.picture} /*alt={imgAlt}*/ height="120px" width="120px"/>
           </div>
           <div className={styles.infoContainer}>
             <div className={styles.innerText}>
@@ -39,7 +39,6 @@ function SavedJobs() {
         </div>
       ))}
     </div>
-    
     </>
   );
 }

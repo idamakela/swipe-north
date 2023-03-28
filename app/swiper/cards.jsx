@@ -45,6 +45,7 @@ export default function Cards({
 
     const handleSaveClick = () => {
         localStorage.setItem(currentJob.id, JSON.stringify(jobs[currentJobIndex]));
+        setCurrentJobIndex(currentJobIndex + 1);
         console.log(currentJob)
       };
       
@@ -102,17 +103,7 @@ export default function Cards({
                 </div>
             </div>
             {showModal && (
-              <BigCard
-               job={currentJob}
-               setShowModal={setShowModal}
-               showModal={showModal} 
-               title={title} company={company} 
-               jobbDescription={jobbDescription} 
-               aboutUs={aboutUs} 
-               lastDate={lastDate}
-               experience={experience}
-               //contactEmail={contactEmail}
-               />
+              <BigCard id={id} job={currentJob} setShowModal={setShowModal}/>
             )}
         </TinderCard>
     );
