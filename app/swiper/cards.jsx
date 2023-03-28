@@ -16,9 +16,6 @@ import Icon from '../icon.js';
 
 // continue functions from this example: https://github.com/3DJakob/react-tinder-card-demo/blob/master/src/examples/Advanced.js
 
-// Use DynamicComponentWithNoSSR instead of react-tinder-card
-
-
 export default function Cards({
     picture,
     /*imgAlt,*/
@@ -32,9 +29,7 @@ export default function Cards({
     experience,
     //contactEmail
 }) {
-    // function icon () {
-    //     //iconDescription[i] if true => correct icon
-    // }
+
     const [currentJobIndex, setCurrentJobIndex] = useState(0);
     const [showModal, setShowModal] = useState(false)
 
@@ -54,40 +49,12 @@ export default function Cards({
         localStorage.setItem(currentJob.id, JSON.stringify(jobs[currentJobIndex]));
         setCurrentJobIndex(currentJobIndex + 1);
         console.log(currentJob)
-      };
+    };
       
-
     const currentJob = jobs[currentJobIndex];
 
     //placeholder medans nedan
-    var icon = null;
-    console.log(iconDescription.transport)
-
-    function iconVar () {
-        //iconDescription[i] if true => correct icon
-        switch (true) {
-            case iconDescription.transport:
-                //icon for transport
-                icon = <FaTaxi />
-                break;
-            case iconDescription.remote:
-                //icon for remote
-                icon = <BsWifi />
-                break;
-            case iconDescription.local:
-                //icon for local/office
-                icon = <HiHome />
-                break;
-            case iconDescription.hybrid:
-                //icon for hybrid
-                icon = <SiHomeassistant />
-                break;
-            default:
-                icon = <MdOutlineWork />
-                //icon for default
-        }
-    }
-    iconVar()
+    const icon = 'icon';
 
     const fullDesc = jobbDescription;
     const words = fullDesc.split(' ');
