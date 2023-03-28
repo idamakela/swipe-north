@@ -6,12 +6,19 @@ import EmailModal from '../components/EmailModal';
 function SavedJobs() {
   const [savedJobs, setSavedJobs] = useState([]);
 
+    //why use map here?? maybe should only be retrieving the data
   useEffect(() => {
     const savedJobsData = Object.keys(localStorage).map((key) => JSON.parse(localStorage.getItem(key)))
     if (savedJobsData) {
       setSavedJobs(savedJobsData);
     }
   }, []);
+
+  //chatGPTs example
+//   useEffect(() => {
+//     const storedObject = localStorage.getItem('myObject');
+//     setMyObject(JSON.parse(storedObject));
+//   }, []);
 
   const handleClickClose = (id) => {
     localStorage.removeItem(id);
