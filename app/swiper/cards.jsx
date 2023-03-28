@@ -1,6 +1,5 @@
 "use client";
 import { useState } from "react";
-import TinderCard from 'react-tinder-card';
 import { FaHeart } from 'react-icons/fa';
 import { Close, Revert } from 'grommet-icons';
 import { RxDoubleArrowUp } from 'react-icons/rx';
