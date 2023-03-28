@@ -18,7 +18,7 @@ export default function JobList({jobs}) {
     
     <div className={styles.jobfilter}>
       <select className={styles.selector}>
-        <option value="">Alla yrke</option>
+        <option value="">Alla yrken</option>
 	      <option value="Administration">Administration</option>
         <option value="It-Consult">It-Consult</option>
 	      <option value="It-Support">It-Support</option>

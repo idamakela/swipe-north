@@ -1,6 +1,7 @@
 "use client"
 import React, { useState, useEffect } from 'react';
 import styles from '../../styles/savedjobs.module.scss'
+import EmailModal from '../components/EmailModal';
 
 function SavedJobs() {
   const [savedJobs, setSavedJobs] = useState([]);
@@ -20,6 +21,7 @@ function SavedJobs() {
   return (
     <>
     <h1 className={styles.title}>Saved Jobs</h1>
+    <EmailModal />
     <div className={styles.savedJobsContainer}>
       {savedJobs.map(job => (
         <div className={styles.savedJobsList} key={job.id}>

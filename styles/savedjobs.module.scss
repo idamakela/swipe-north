@@ -1,9 +1,5 @@
 @import 'variables';
 
-.savedJobsContainer {
-    margin-top: 3vh;
-}
-
 .savedJobsList {
     display: flex;
     gap: 8px;
@@ -43,6 +39,7 @@
 .title {
     text-align: center;
     font-size: 36px;
+    margin: 8px 0 12px;
 }
 
 .jobTitle {
