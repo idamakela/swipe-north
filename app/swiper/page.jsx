@@ -5,6 +5,7 @@ import Cards from './cards.jsx';
 import styles from '../../styles/swiper.module.scss';
 import Filter from '../filter';
 import dynamic from 'next/dynamic';
+import BigCard from "./BigCard";
 
 const TinderCard = dynamic(
   () => import('react-tinder-card'),
@@ -61,6 +62,9 @@ export default function Swiper() {
                         onSwipe={onSwipe}
                     >
                         <Cards {...job} />
+                        {showModal && (
+                          <BigCard id={id} job={jobs} setShowModal={setShowModal}/>
+                        )}
                     </TinderCard>
                 ))}
             </div>

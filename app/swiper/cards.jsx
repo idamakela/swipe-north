@@ -97,9 +97,6 @@ export default function Cards({
                 <Close />
             </button>
         </div>
-         {showModal && (
-      <BigCard id={id} job={currentJob} setShowModal={setShowModal}/>
-    )}
     </div>
    
     );
