@@ -1,0 +1,26 @@
+@import "variables";
+@import "mixins";
+
+.jobfilter{
+    @include flex-column;
+    align-items: center;
+    margin-top: 2vh;
+
+    .selector {
+    border-radius: 10px;
+    height: 40px;
+    width: 300px;
+    font-size: medium;
+    max-width: 90vw; 
+    
+    option {
+        width: 00px; 
+        max-width: 90vw; 
+        background-color: $light-yellow;
+        margin: 10px;
+        padding: $base-pixel;
+    }
+
+    
+    }
+}

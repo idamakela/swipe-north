@@ -20,6 +20,7 @@ export default function BigCard({ id, setShowModal, job }) {
                             <RxDoubleArrowDown />
                         </button>
                     </div>
+                     <button className={`${styles.btn} ${styles.pulse}`}>ANSÖK HÄR!</button>
                     {/* this below needs logic to set right icon */}
                     <p className={styles.icons}>*icons*</p>
                     <h4 className={styles.subTitle}>Vi söker dig som:</h4>
@@ -31,7 +32,7 @@ export default function BigCard({ id, setShowModal, job }) {
                     <h4 className={styles.subTitle}>Kontaktuppgifter</h4>
                     <p className={styles.paragraph}>Test@ansökhär.com</p>
                     <h4 className={styles.last}>Sista ansökningsdatum <span className={styles.date}>2023-05-04</span></h4>
-                    <button className={styles.btn}>ANSÖK HÄR!</button>
+                    
                 </div>
             
         </div>

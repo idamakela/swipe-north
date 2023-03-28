@@ -5,9 +5,13 @@ import { FaHeart } from 'react-icons/fa';
 import { Close, Revert } from 'grommet-icons';
 import { RxDoubleArrowUp } from 'react-icons/rx';
 import styles from '../../styles/swiper.module.scss';
+<<<<<<< HEAD
 import BigCard from "./BigCard";
 import jobs from "@/public/jobsData";
 
+=======
+import Icon from '../icon.js';
+>>>>>>> 9a2fd0a7b09e658670b86184d88bad96deee99cc
 
 // continue functions from this example: https://github.com/3DJakob/react-tinder-card-demo/blob/master/src/examples/Advanced.js
 
@@ -86,8 +90,16 @@ export default function Cards({
                         </div>
                         {/* this below needs logic to set right icon */}
                         <p
+<<<<<<< HEAD
                             className={styles.icons}>{`${currentJob.icon} ${currentJob.percentajeJob}%`}</p>
                         <p>{`${currentJob.smallDesc}...`}</p>
+=======
+                            className={styles.icons}
+                        >
+                        <Icon />    
+                        {`${icon} ${percentajeJob}%`}</p>
+                        <p>{`${smallDesc}...`}</p>
+>>>>>>> 9a2fd0a7b09e658670b86184d88bad96deee99cc
                     </div>
                 </div>
                 <div className={styles.btnContainer}>

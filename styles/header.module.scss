@@ -1,10 +1,11 @@
-@import 'variables';
+@import "variables";
 @import 'mixins';
 
 .headerStyle {
     @include flex-row;
     justify-content: space-between;
     align-items: center;
+    padding: $base-pixel;
 
     .heart {
     font-size: 30px;
@@ -12,4 +13,15 @@
     display: flex;
     justify-content: space-between;
     }
+<<<<<<< HEAD
+=======
+
+    a {
+        color: $dark-color;
+        text-decoration: none;
+    }
+>>>>>>> 9a2fd0a7b09e658670b86184d88bad96deee99cc
 }
+
+
+
