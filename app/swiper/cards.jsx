@@ -1,6 +1,5 @@
 "use client";
 import { useState } from "react";
-import { FaHeart } from 'react-icons/fa';
 import { FaHeart, FaTaxi } from 'react-icons/fa';
 import {BsWifi} from 'react-icons/bs';
 import {HiHome} from 'react-icons/hi';
@@ -59,7 +58,6 @@ export default function Cards({
       
 
     const currentJob = jobs[currentJobIndex];
-    const icon = 'icon';
 
     //placeholder medans nedan
     var icon = null;
