@@ -2,7 +2,7 @@
 import styles from "../styles/page.module.scss";
 import { SlArrowUp } from "react-icons/sl";
 import Link from 'next/link';
-import backgroundImg from '../public/backGroundFront.png'
+import backgroundImg from '../public/backgroundfront.png'
 
 export default function Home() {
     return <main className={styles.main} style={{ backgroundImage: `url(${backgroundImg.src})`, backgroundSize: 'cover', backgroundRepeat: 'no-repeat', backgroundAttachment: 'fixed' }}>
