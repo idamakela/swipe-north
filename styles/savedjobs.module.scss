@@ -1,0 +1,70 @@
+@import 'variables';
+
+.savedJobsContainer {
+    margin-top: 3vh;
+}
+
+.savedJobsList {
+    display: flex;
+    gap: 8px;
+    background-color: $light-color;
+    border: 1px solid $dark-color;
+    padding: 16px;
+}
+
+.bigImg {
+    border-radius: 5px;
+}
+
+.clearBtn {
+    background-color: $red-color;
+    border: none;
+    color: #fff;
+    font-size: 1.6rem;
+    padding: 12px 30px;
+    position: relative;
+    text-transform: uppercase;
+    transition: 0.25s;
+    width: 100%;
+}
+
+.infoContainer {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    width: 100%;
+}
+
+.innerText {
+    display: flex;
+    justify-content: space-between;
+}
+
+.title {
+    text-align: center;
+    font-size: 36px;
+}
+
+.jobTitle {
+    font-size: 18px;
+    margin: 0;
+}
+
+.company {
+    font-size: 14px;
+    margin: 4px 0;
+}
+
+.close {
+    font-size: 16px;
+    font-weight: 600;
+}
+
+.paragraph {
+    background-color: #fff;
+    font-size: 16px;
+    margin: 0;
+    padding: 8px;
+    text-align: center;
+}
+

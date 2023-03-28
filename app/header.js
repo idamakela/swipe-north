@@ -1,24 +1,23 @@
 import React from "react";
 import Link from "next/link";
-import { FaHeart } from "react-icons/fa";
+import { VscGlobe, VscHeartFilled } from "react-icons/vsc";
 import styles from "styles/header.module.scss";
-
-
 
 export default function header(){
     return(
         <>
-        <header className={styles.headerStyle}>
-            <div className={styles.logo}>
-            <Link href="/">
-                <img src="logo.png" alt="Skellefteå logo" style={{height:"50px"}}></img>
-            </Link>
+        <header className={styles['headerStyle']}>
+            <div className={styles['logo']}>
+                <Link href="/" className={styles['linkstyle']}>
+                    <img src="logo.png" alt="Skellefteå logo" style={{width: "150px"}}></img>
+                </Link>
             </div>
-            <Link href="/savedjobs">
-            <div className={styles.heart}>
-                <FaHeart />
-            </div>
-            </Link>
+            <div className={styles['heart']}>
+                <Link href="/savedjobs">
+                <VscHeartFilled />
+                </Link>
+                <VscGlobe />
+            </div>  
         </header>
         </>
     )
