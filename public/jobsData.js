@@ -23,7 +23,7 @@ const jobs = [
         contactTelefon:"",
         contactEmail:"Anne.Svensson@skelleftea-taxi.se"
       },
-      lastDate: 2023/4/15,
+      lastDate: "2023/4/15",
     },
     {
       id: 2,
@@ -48,7 +48,7 @@ const jobs = [
         contactTelefon:"0910 - 73 50 00",
         contactEmail:""
       },
-      lastDate: 2023/5/28,
+      lastDate: "2023/5/28",
     },
     {  
       id: 3,
@@ -73,7 +73,7 @@ const jobs = [
         contactTelefon:"0910 - 73 50 00",
         contactEmail:""
       },
-      lastDate: 2023/3/31,
+      lastDate: "2023/3/31",
      },
     {  
       id: 4,
@@ -98,7 +98,7 @@ const jobs = [
         contactTelefon:"0910 - 73 50 00",
         contactEmail:""
       },
-      lastDate: 2023/3/31,
+      lastDate: "2023/3/31",
      },
     {  
       id: 5,
@@ -123,7 +123,7 @@ const jobs = [
         contactTelefon:"0910 - 73 50 00",
         contactEmail:""
       },
-      lastDate: 2023/3/26,
+      lastDate: "2023/3/26",
      },
     {  
       id: 6,
@@ -148,7 +148,7 @@ const jobs = [
         contactTelefon:"0910 - 73 50 00",
         contactEmail:""
       },
-      lastDate: 2023/3/26,
+      lastDate: "2023/3/26",
      },
      {  
       id: 7,
@@ -173,7 +173,7 @@ const jobs = [
         contactTelefon:"0910 - 73 50 00",
         contactEmail:""
       },
-      lastDate: 2023/4/2,
+      lastDate: "2023/4/2",
      },
      {  
       id: 8,
@@ -198,7 +198,7 @@ const jobs = [
         contactTelefon:"0910 - 73 50 00",
         contactEmail:""
       },
-      lastDate: 2023/4/10,
+      lastDate: "2023/4/10",
      },
      {  
       id: 9,
@@ -223,7 +223,7 @@ const jobs = [
         contactTelefon:"0910 - 73 50 00",
         contactEmail:""
       },
-      lastDate: 2023/4/24,
+      lastDate: "2023/4/24",
      },
      {  
       id: 10,
@@ -248,7 +248,7 @@ const jobs = [
         contactTelefon:"0910 - 73 50 00",
         contactEmail:""
       },
-      lastDate: 2023/5/31,
+      lastDate: "2023/5/31",
      },
      {  
       id: 11,
@@ -273,7 +273,7 @@ const jobs = [
         contactTelefon:"0910 - 73 50 00",
         contactEmail:""
       },
-      lastDate: 2023/8/20,
+      lastDate: "2023/8/20",
      },
      {  
       id: 12,
@@ -298,7 +298,7 @@ const jobs = [
         contactTelefon:"",
         contactEmail:"ahlback@lovangergarden.se"
       },
-      lastDate: 2023/4/17,
+      lastDate: "2023/4/17",
      },
     {  
       id: 13,
@@ -323,7 +323,7 @@ const jobs = [
         contactTelefon:"",
         contactEmail:""
       },
-      lastDate: 2023/4/23,
+      lastDate: "2023/4/23",
      },
     {  
       id: 14,
@@ -348,9 +348,9 @@ const jobs = [
         contactTelefon:"",
         contactEmail:""
       },
-      lastDate: 2023/4/16,
+      lastDate: "2023/4/16",
      }
-  ]
+  ];
 
 
   
