@@ -8,67 +8,56 @@ import dynamic from 'next/dynamic';
 import { FaHeart } from 'react-icons/fa';
 import { Close, Revert } from 'grommet-icons';
 
-
-const TinderCard = dynamic(
-    () => import('react-tinder-card'),
-    { ssr: false }
-);
-
-// const LocalStorage = dynamic(
-//     () => import('localstorage'),
-//     { ssr: false }
-// );
-
+const TinderCard = dynamic(() => import('react-tinder-card'), { ssr: false });
 
 export default function Swiper() {
     const [jobs, setJobs] = useState(data.slice(0, 7)); //sets data, from index 0-7
 
     const handleSwipe = (direction, job) => {
-        console.log(`Card ID: ${job.id}, Direction: ${direction}`)
+        console.log(`Card ID: ${job.id}, Direction: ${direction}`);
 
-        if(direction == 'up') {
-            console.log("up motherfucker")
+        if (direction == 'up') {
+            console.log('up motherfucker');
 
             //saves (incorrect) item in localstorage
-            const savedJobs = JSON.parse(localStorage.getItem('savedJobs')) || [];
+            const savedJobs =
+                JSON.parse(localStorage.getItem('savedJobs')) || [];
             savedJobs.push(job.id);
             localStorage.setItem('savedJobs', JSON.stringify(savedJobs));
-
 
             //see whats in localstorage in specific key
             const myStorage = localStorage.getItem('savedJobs');
             console.log(myStorage);
 
             //views value for spec key in localstorage
-            // for (let i = 0; i < localStorage.length; i++) {
-            //     const key = localStorage.key(i)
-            //     const value = localStorage.getItem(key)
-            //     console.log(key, value)
-            // }
+            for (let i = 0; i < localStorage.length; i++) {
+                const key = localStorage.key(i)
+                const value = localStorage.getItem(key)
+                console.log(key, value)
+            }
         }
-    }
-
+    };
 
     const handleRemove = () => {
         // take the objects id
         // swipe it down
-    }
+    };
 
     const handleUndo = () => {
         //method in library
-    }
+    };
 
     const handleHeart = () => {
         //swipe object up
-    }
+    };
 
     return (
         <>
-        <div className={styles.title}>
-        <Filter /> 
-        </div>
+            <div className={styles.title}>
+                <Filter />
+            </div>
             <div className={styles.cardsContainer}>
-            {jobs.map((job, index) => (
+                {jobs.map((job) => (
                     <TinderCard
                         key={job.id}
                         className={styles.swipe}
@@ -76,14 +65,13 @@ export default function Swiper() {
                         onSwipe={(direction) => handleSwipe(direction, job)}
                     >
                         <Cards {...job} />
-
                     </TinderCard>
                 ))}
                 <div className={styles.btnContainer}>
-                    <button className={styles.back} >
+                    <button className={styles.back}>
                         <Revert />
                     </button>
-                    <button className={styles.heart}> 
+                    <button className={styles.heart}>
                         <FaHeart />
                     </button>
                     <button className={styles.remove}>
