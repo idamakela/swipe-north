@@ -1,49 +1,66 @@
 "use client"
-import React, { useState } from 'react';
-import styles from '../../styles/savedjobs.module.scss';
+import React, { useState, useEffect } from 'react';
+import styles from '../../styles/savedjobs.module.scss'
 
-const SaveJob = () => {
-  const [title, setTitle] = useState('');
-  const [location, setLocation] = useState('');
-  const [data, setData] = useState([]);
-  const [image, setImage] = useState('');
+function SavedJobs() {
+  const [savedJobs, setSavedJobs] = useState([]);
 
-  const handleSubmit = (e) => {
-    e.preventDefault();
-    // your code to save the job goes here
+  useEffect(() => {
+    const savedJobsData = Object.keys(localStorage).map((key) => JSON.parse(localStorage.getItem(key)))
+    if (savedJobsData) {
+      setSavedJobs(savedJobsData);
+    }
+  }, []);
+
+  const handleClickClose = (id) => {
+    localStorage.removeItem(id);
+    setSavedJobs(prevJobs => prevJobs.filter(job => job.id !== id));
   };
 
-  const handleChangeTitle = (e) => {
-    setTitle(e.target.value);
-  };
-
-  const handleChangeLocation = (e) => {
-    setLocation(e.target.value);
-  };
-
-  const handleChangeImage = (e) => {
-    setImage(e.target.value);
+  const handleLike = (id) => {
+    setSavedJobs(prevJobs => prevJobs.map(job => {
+      if (job.id === id) {
+        return {...job, liked: !job.liked};
+      }
+      return job;
+    }));
   };
 
   return (
-    <div className={styles.container}>
-      <form onSubmit={handleSubmit}>
-        <div className={styles.box}>
-          <label htmlFor="title">Title</label>
-          <input id="title" type="text" value={title} onChange={handleChangeTitle} />
-        </div>
-        <div className={styles.box}>
-          <label htmlFor="location">Location</label>
-          <input id="location" type="text" value={location} onChange={handleChangeLocation} />
-        </div>
-        <div className={styles.box}>
-          <label htmlFor="image">Image</label>
-          <input id="image" type="file" value={image} onChange={handleChangeImage} />
-        </div>
-        <button type="submit">Save Job</button>
-      </form>
-    </div>
-  );
-};
+    <>
+    <h1 className={styles.title}>Saved Jobs</h1>
+    <div className={styles.savedJobsContainer}>
+      {savedJobs.map(job => (
+        <div className={styles.savedJobsList} key={job.id}>
+          <div className={styles.imgContainer}>
+            <img className={styles.bigImg} src={job.picture} /*alt={imgAlt}*/ height="120px" width="120px"/>
+          </div>
+          <div className={styles.infoContainer}>
+            <div className={styles.innerText}>
+              <div>
+                <h2 className={styles.jobTitle}>{job.title}</h2>
+                <h4 className={styles.company}>{job.company}</h4>
+              </div>
+              
+              <div className={styles.icons}>
+                {job.liked ? (
+                  <span onClick={() => handleLike(job.id)} className={styles.heartLiked}>♥</span>
+                ) : (
+                  <span onClick={() => handleLike(job.id)} className={styles.heart}>♡</span>
+                )}
+              </div>
 
-export default SaveJob;
+
+              <div onClick={() => handleClickClose(job.id)} className={styles.close}>⊗</div>
+            </div>
+            <h4 className={styles.icons}>{`${job.icon} ${job.percentajeJob}%`}</h4>
+          </div>
+        </div>
+      ))}
+     
+    </div>
+    </>
+  );
+}
+
+export default SavedJobs;

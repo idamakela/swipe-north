@@ -1,26 +1,11 @@
 
-//import agilprojekledare from './images/AgilProjekledare.jpg'
-import bistandshandlaggare from './images/Bistandshandlaggare.jpg'
-import brandman from './images/Brandman.jpg'
-import chiefengineer from './images/ChiefEngineer.jpg'
-import forskolarektor from './images/ForskolaRektor.jpg'
-import forskollarare from './images/Forskollarare.jpg'
-import fullstackutvecklare from './images/Fullstackutvecklare.jpg'
-import hotelcleaner from './images/HotelCleaner.jpg'
-import kock from './images/Kock.jpg'
-import nurse from './images/Nurses.jpg'
-import samhallsstrateg from './images/Samhallsstrateg.jpg'
-//import psykiatri from './images/SommarjobbSocialpshykiatri.jpg'
-import vaktmastare from './images/SommarjobbVaktmastare.jpg'
-import taxi from './images/TaxiDriver.jpg'
-
 const jobs = [
     {
       id: 1,
       title: "Taxichaufför",
-      profesion: "Trasport",
+      profession: "Trasport",
       company:"Skellefteå Taxi AB",
-      picture: taxi ,
+      picture: './images/TaxiDriver.jpg' ,
       area: "Skellefteå",
       iconDescription: {
         transport: true,
@@ -38,14 +23,14 @@ const jobs = [
         contactTelefon:"",
         contactEmail:"Anne.Svensson@skelleftea-taxi.se"
       },
-      lastDate: 2023/4/15,
+      lastDate: "2023/4/15",
     },
     {
       id: 2,
       title: "Sjuksöterska",
-      profesion: "Vård och omsorg",
+      profession: "Vård och omsorg",
       company:"Skellefteå Sjukhuset",
-      picture: nurse,
+      picture: './images/Nurses.jpg',
       area: "Skellefteå",
       iconDescription: {
         transport: false,
@@ -63,14 +48,14 @@ const jobs = [
         contactTelefon:"0910 - 73 50 00",
         contactEmail:""
       },
-      lastDate: 2023/5/28,
+      lastDate: "2023/5/28",
     },
     {  
       id: 3,
       title: "Biståndshandläggare",
-      profesion: "Vård och omsorg",
+      profession: "Vård och omsorg",
       company:"Skellefteå Kommun",
-      picture: bistandshandlaggare,
+      picture: './images/Bistandshandlaggare.jpg',
       area: "Skellefteå",
       iconDescription: {
         transport: false,
@@ -88,14 +73,14 @@ const jobs = [
         contactTelefon:"0910 - 73 50 00",
         contactEmail:""
       },
-      lastDate: 2023/3/31,
+      lastDate: "2023/3/31",
      },
     {  
       id: 4,
       title: "Rektor",
-      profesion: "Utbildning",
+      profession: "Utbildning",
       company:"Lejonström anpassad grundskola",
-      picture: forskolarektor ,
+      picture: './images/ForskolaRektor.jpg',
       area: "Skellefteå",
       iconDescription: {
         transport: false,
@@ -113,14 +98,14 @@ const jobs = [
         contactTelefon:"0910 - 73 50 00",
         contactEmail:""
       },
-      lastDate: 2023/3/31,
+      lastDate: "2023/3/31",
      },
     {  
       id: 5,
       title: "Samhällsstrateg",
-      profesion: "Administration",
+      profession: "Administration",
       company:"Skelleftå Kommun",
-      picture: samhallsstrateg,
+      picture: './images/Samhallsstrateg.jpg',
       area: "Skellefteå",
       iconDescription: {
         transport: false,
@@ -138,14 +123,14 @@ const jobs = [
         contactTelefon:"0910 - 73 50 00",
         contactEmail:""
       },
-      lastDate: 2023/3/26,
+      lastDate: "2023/3/26",
      },
     {  
       id: 6,
       title: "Förskollärare",
-      profesion: "Utbildning",
+      profession: "Utbildning",
       company:"Kågeskola",
-      picture: forskollarare,
+      picture: './images/Forskollarare.jpg',
       area: "Skellefteå",
       iconDescription: {
         transport: false,
@@ -163,14 +148,14 @@ const jobs = [
         contactTelefon:"0910 - 73 50 00",
         contactEmail:""
       },
-      lastDate: 2023/3/26,
+      lastDate: "2023/3/26",
      },
      {  
       id: 7,
       title: "Kock",
-      profesion: "restaurang",
+      profession: "restaurang",
       company:"Kågeskola",
-      picture: kock,
+      picture: './images/Kock.jpg' ,
       area: "Skellefteå",
       iconDescription: {
         transport: false,
@@ -188,14 +173,14 @@ const jobs = [
         contactTelefon:"0910 - 73 50 00",
         contactEmail:""
       },
-      lastDate: 2023/4/2,
+      lastDate: "2023/4/2",
      },
      {  
       id: 8,
       title: "Agil projektledare",
-      profesion: "It-support",
+      profession: "It-support",
       company:"Skellefteå Kommun",
-      picture: agilprojekledare,
+      picture: './images/agil.jpg',
       area: "Skellefteå",
       iconDescription: {
         transport: false,
@@ -213,14 +198,14 @@ const jobs = [
         contactTelefon:"0910 - 73 50 00",
         contactEmail:""
       },
-      lastDate: 2023/4/10,
+      lastDate: "2023/4/10",
      },
      {  
       id: 9,
       title: "Sommarjobb inom socialpsykiatri",
-      profesion: "Vård och omsorg",
+      profession: "Vård och omsorg",
       company:"Skellefteå Kommun",
-      picture:psykiatri ,
+      picture:'./images/psykiatri.jpg',
       area: "Skellefteå",
       iconDescription: {
         transport: false,
@@ -238,14 +223,14 @@ const jobs = [
         contactTelefon:"0910 - 73 50 00",
         contactEmail:""
       },
-      lastDate: 2023/4/24,
+      lastDate: "2023/4/24",
      },
      {  
       id: 10,
       title: "Sommarjobb - Vaktmästare",
-      profesion: "Underhåll",
+      profession: "Underhåll",
       company:"Skellefteå Kommun",
-      picture: vaktmastare,
+      picture:'./images/SommarjobbVaktmastare.jpg',
       area: "Skellefteå",
       iconDescription: {
         transport: false,
@@ -263,14 +248,14 @@ const jobs = [
         contactTelefon:"0910 - 73 50 00",
         contactEmail:""
       },
-      lastDate: 2023/5/31,
+      lastDate: "2023/5/31",
      },
      {  
       id: 11,
       title: "Brandmän",
-      profesion: "Säkerhetsarbete",
+      profession: "Säkerhetsarbete",
       company:"Skellefteå Kommun",
-      picture: brandman,
+      picture: './images/Brandman.jpg',
       area: "Skellefteå",
       iconDescription: {
         transport: false,
@@ -288,14 +273,14 @@ const jobs = [
         contactTelefon:"0910 - 73 50 00",
         contactEmail:""
       },
-      lastDate: 2023/8/20,
+      lastDate: "2023/8/20",
      },
      {  
       id: 12,
       title: "Hotellstäd",
-      profesion: "Restaurang",
+      profession: "Restaurang",
       company:"Lövånger Gården",
-      picture: hotelcleaner,
+      picture: './images/HotelCleaner.jpg',
       area: "Skellefteå",
       iconDescription: {
         transport: false,
@@ -313,14 +298,14 @@ const jobs = [
         contactTelefon:"",
         contactEmail:"ahlback@lovangergarden.se"
       },
-      lastDate: 2023/4/17,
+      lastDate: "2023/4/17",
      },
     {  
       id: 13,
       title: "Chief Engineeer Plant & Piping",
-      profesion: "konstruktör, tillverkningsindustri",
+      profession: "konstruktör, tillverkningsindustri",
       company:"Poolia Sverige AB",
-      picture: chiefengineer,
+      picture: './images/ChiefEngineer.jpg',
       area: "Skellefteå",
       iconDescription: {
         transport: false,
@@ -338,14 +323,14 @@ const jobs = [
         contactTelefon:"",
         contactEmail:""
       },
-      lastDate: 2023/4/23,
+      lastDate: "2023/4/23",
      },
     {  
       id: 14,
       title: "Senior fullstackutvecklare",
-      profesion: "It-consult",
+      profession: "It-consult",
       company:"PersonalExpressen AB",
-      picture: fullstackutvecklare,
+      picture: './images/Fullstackutvecklare.jpg',
       area: "Skellefteå",
       iconDescription: {
         transport: false,
@@ -363,9 +348,12 @@ const jobs = [
         contactTelefon:"",
         contactEmail:""
       },
-      lastDate: 2023/4/16,
+      lastDate: "2023/4/16",
      }
-  ]
+  ];
+
+
+  
   export default jobs
 
 /*

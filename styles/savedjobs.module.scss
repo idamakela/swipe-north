@@ -1,4 +1,12 @@
+@import 'variables';
+@import'mixins';
 
+
+.savedJobsContainer {
+    margin-top: 3vh;
+}
+
+////
 $dark-color: #000000;
 $medium-color: #272727;
 $light-color: #ffffff;
@@ -11,89 +19,111 @@ $readex-pro: 'Readex Pro', sans-serif;
 $base-pixel: 10px;
 
 $card-width: 300px;
-$card-height: 400px;
+$card-height: 150px;
 
-.savedJobsContainer {
 
-  margin-top: 5vh;
+.savedJobsContainer{
+  display: inline;
+  flex-wrap: wrap;
+
+
+}
   
-  }
+.title {
+  font-size: 24px;
+  font-weight: bold;
+  margin-bottom: 20px;
+}
   
+ .savedJobsList {
   
-  
-  
-  .savedJobsList {
-  
-   display: flex;
+  display: inline-flex;
+   margin-bottom: 20px;
    width: $card-width;
-   height: $card-width;
-  
-  gap: 8px;
-  
+   text-align: center;
   background-color: $light-color;
-  
-  border: 1px solid $dark-color;
-  
-  padding: 16px;
-  
+  border: 2px solid $dark-color;
+  padding: 20px;
+  color:$dark-color;
   }
-  
-  
-  
-  
+//.imgContainer{
+  //margin-right: 1px;
+//}
   .bigImg {
-  
-   height: 150px;
-  
-   width: 150px;
+  max-width: 120px;
+ 
+  .icons {
+    font-size: 20px;
+    margin: 10px;
+  }
+
   
   }
   
-  
-  
-  
-  .clearBtn {
-  
-   background: linear-gradient(45deg, $dark-green, $light-green);
-  
-   border: none;
-  
-   color: #fff;
-  
-   font-size: 1.6rem;
-  
-   padding: 12px 30px;
-  
-   text-transform: uppercase;
-  
-   transition: 0.25s;
-  
-   width: 100%;
-  
+  .company {
+    font-size:13px ;
+    color:$dark-color;
   }
   
   
+  .close{
+    cursor: pointer;
+    font-size: 24px;
+   margin-left: 100px;
+   left: 15px;
+
+   
+  }
+
+.icons{
+  display: flex;
+  align-items: center;
+  color: non;
+ 
+ 
+}
+
+.heart, .heartLinked {
+  cursor: pointer;
+  font-size: 20px;
+  margin-top: 5px;
+}
+.heartLinked{
+  color: #8B341F;
+}
+.heart{
+  color: #8B341F;
+  border: 2px solid var(#8B341F);
+}
+
+.heart:hover{
+  color: #e61919;
+  border-color: #8B341F;
+}
+
   
-  
+  .jobTitle{
+  font-size: 13px;
+   margin: 1px;
+    
+
+    text-align: center;
+  }
+
   .infoContainer {
-  
    display: flex;
-  
    flex-direction: column;
-  
    justify-content: space-between;
+   width: $card-width;
+   
+  
   
   }
   
   
   
   
-  .title {
-  
-    display: grid;
-  text-align: center;
-  
-  font-size: 36px;
-  
-  }
+ 
+
+
   

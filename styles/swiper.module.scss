@@ -1,5 +1,5 @@
-@import "variables";
-@import "mixins";
+@import 'variables';
+@import 'mixins';
 
 .title {
     background-color: transparent;
@@ -12,53 +12,65 @@
 .cardsContainer {
     display: flex;
     justify-content: center;
-    margin-top: 5vh;
+    margin-top: 2vh;
 }
 
 .card {
     @include flex-column;
+    font-family: $readex-pro;
     justify-content: space-between;
-    font-family: Arial, Helvetica, sans-serif;
-    background-color: white;
-    color: black;
+    background-color: $light-color;
+    color: $dark-color;
     position: relative;
     width: 600px;
-    padding: 20px;
+    padding: calc($base-pixel * 2);
     max-width: 90vw;
     height: 75vh;
-    border-radius: 10px;
-    box-shadow: 0px 18px 53px 0px rgba(0, 0, 0, 0.3);
+    border-radius: $base-pixel;
+    //box-shadow: 0px 18px 53px 0px rgba(0, 0, 0, 0.3);
 
-    .imgContainer {
-        max-height: 50%;
+    .upperElements {
+        @include flex-column;
+        justify-content: flex-start;
 
-        img {
-            height: 100%;
-            width: 100%;
+        .imgContainer {
+            max-height: 220px;
+            max-width: 100%;
+    
+            img {
+                height: 100%;
+                width: 100%;
+                object-fit: cover;
+            }
         }
     }
 
     .header {
         display: grid;
-        grid-template-columns: repeat(2, 1fr);
-        grid-template-rows: repeat(2, 1fr);
+        grid-template-columns: 90% 10%;
+        grid-template-rows: minmax(0, 1fr 1fr);
         grid-column-gap: 0px;
         grid-row-gap: 0px;
+        margin: $base-pixel 0;
 
         .title {
             grid-area: 1 / 1 / 2 / 2;
-            font-size: 24px;
+            font-size: 2.2rem;
             text-transform: capitalize;
+            margin: 0;
         }
+
         .company {
             grid-area: 2 / 1 / 3 / 2;
-            font-size: 1rem;
+            font-size: 1.8rem;
             font-weight: normal;
             text-transform: capitalize;
+            margin: 0;
         }
+
         .more {
             grid-area: 1 / 2 / 3 / 3;
-            font-size: 20px;
+            font-size: 2rem;
             width: fit-content;
             align-self: start;
             justify-self: end;
@@ -71,8 +83,8 @@
         }
 
         p {
-            font-size: 15px;
-            margin-bottom: 10px;
+            font-size: 1.5rem;
+            margin-bottom: $base-pixel;
         }
     }
 
@@ -82,8 +94,7 @@
         align-items: center;
         border: none;
         background-color: transparent;
-        padding: 10px;
-        font-family: Arial, Helvetica, sans-serif;
+        padding: $base-pixel;
     }
 }
 
@@ -91,25 +102,25 @@
     @include flex-row;
     justify-content: center;
     align-items: center;
-    gap: 20px;
+    gap: calc($base-pixel * 2);
 
     .back,
     .remove {
-        background-color: black;
-        color: white;
+        background-color: $dark-color;
+        color: $light-color;
         border-radius: 50%;
         font-size: 23px;
 
         svg {
-            fill: white;
-            stroke: white;
+            fill: $light-color;
+            stroke: $light-color;
         }
     }
 
     .heart {
         font-size: 28px;
-        color: white;
-        background-color: red;
+        color: $light-color;
+        background-color: $red-color;
         border-radius: 50%;
         padding: 15px;
     }
