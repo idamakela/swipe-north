@@ -10,12 +10,19 @@ function SavedJobs() {
   const [savedJobs, setSavedJobs] = useState([0]);
   const [listRef] = useAutoAnimate()
 
+    //why use map here?? maybe should only be retrieving the data
   useEffect(() => {
     const savedJobsData = Object.keys(localStorage).map((key) => JSON.parse(localStorage.getItem(key)))
     if (savedJobsData) {
       setSavedJobs(savedJobsData.map(job => ({ ...job, heartFilled: true })));
     }
   }, []);
+
+  //chatGPTs example
+//   useEffect(() => {
+//     const storedObject = localStorage.getItem('myObject');
+//     setMyObject(JSON.parse(storedObject));
+//   }, []);
 
   const handleClickClose = (id) => {
     localStorage.removeItem(id);
