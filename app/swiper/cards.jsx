@@ -50,7 +50,14 @@ export default function Cards({
                 </div>
             </div>
             {showModal && (
-              <BigCard id={id} title={title}  company={company} setShowModal={setShowModal} jobbDescription={jobbDescription} experience={experience} aboutUs={aboutUs}/>
+              <BigCard 
+              id={id} 
+              title={title}  
+              company={company} 
+              setShowModal={setShowModal} 
+              jobbDescription={jobbDescription} 
+              experience={experience} 
+              aboutUs={aboutUs}/>
             )}
         </div>
     );
