@@ -3,7 +3,7 @@ const jobs = [
     {
       id: 1,
       title: "Taxichaufför",
-      profession: "Trasport",
+      profession: "Transport",
       company:"Skellefteå Taxi AB",
       picture: './images/TaxiDriver.jpg' ,
       area: "Skellefteå",
