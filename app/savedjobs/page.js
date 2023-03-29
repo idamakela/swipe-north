@@ -4,7 +4,7 @@ import styles from '../../styles/savedjobs.module.scss'
 import EmailModal from '../components/EmailModal';
 
 function SavedJobs() {
-  const [savedJobs, setSavedJobs] = useState([]);
+  const [savedJobs, setSavedJobs] = useState([0]);
 
   useEffect(() => {
     const savedJobsData = Object.keys(localStorage).map((key) => JSON.parse(localStorage.getItem(key)))
@@ -26,7 +26,7 @@ function SavedJobs() {
       {savedJobs.map(job => (
         <div className={styles.savedJobsList} key={job.id}>
           <div className={styles.imgContainer}>
-            <img className={styles.bigImg} src={job.picture} /*alt={imgAlt}*/ height="120px" width="120px"/>
+            <img className={styles.bigImg} src={job.picture} /*alt={imgAlt}*/ height="100px" width="120px"/>
           </div>
           <div className={styles.infoContainer}>
             <div className={styles.innerText}>

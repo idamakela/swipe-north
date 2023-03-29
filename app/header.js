@@ -9,7 +9,7 @@ export default function header(){
         <header className={styles['headerStyle']}>
             <div className={styles['logo']}>
                 <Link href="/" className={styles['linkstyle']}>
-                    <img src="logo.png" alt="Skellefteå logo" style={{width: "150px"}}></img>
+                    <img src="logo.png" alt="Skellefteå logo" style={{width: "115px"}}></img>
                 </Link>
             </div>
             <div className={styles['heart']}>

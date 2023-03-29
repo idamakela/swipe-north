@@ -3,23 +3,56 @@
  .main {
   min-height: 75vh;
   }
+  
+  .hero {
+    color: $light-color;
+    top: 28vh;
+    position: relative;
+    text-align: center;
+  }
+
+  .title {
+    font-size: 80px;
+    margin: 0;
+  }
+
+  .subTitle {
+    font-size: 26px;
+    margin: 0;
+  }
+
+  .infoText {
+    background-color: rgba(0,0,0,0.5);
+    border: 1px solid rgba(0,0,0,0.7);
+    border-radius: 5px;
+    font-size: 14px;
+    margin: 8px auto 4px;
+    padding: 16px 8px;
+    width: 360px;
+  }
 
 .animationContainer {
-    align-items: center;
     display: flex;
-    flex-direction: column;
-    justify-content: center;
-    position: absolute;
-    top: 78%;
+    justify-content: space-around;
+    margin-top: 12px;
     width: 100vw;
   }
 
   .swipe {
-    color: $light-color;
-    font-size: 2.4rem;
-    font-weight: 300;
-    letter-spacing: 1px;
-    margin-top: 2.4rem;
+    font-size: 24px;
+  }
+
+  
+  .small {
+    font-size: 24px;
+  }
+
+  .medium {
+    font-size: 30px;
+  }
+
+  .big {
+    font-size: 36px;
   }
 
   .small, 
@@ -32,8 +65,7 @@
     animation-iteration-count: infinite;
     animation-play-state: running;
     color: $light-color;
-    font-size: 48px;
-    height: 30px;
+    height: 18px;
     margin: 0;
     padding: 0;
   }
