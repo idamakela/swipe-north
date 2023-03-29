@@ -36,15 +36,21 @@ export default function Swiper() {
                 console.log(key, value)
             }
         }
+
+        if (direction == 'down') {
+
+        }
     };
 
     const handleRemove = () => {
-        // take the objects id
-        // swipe it down
+        //take the objects id
+        //swipe it down
+        //handleSwipe
     };
 
     const handleUndo = () => {
         //method in library
+        //tindercards restoreCard()
     };
 
     const handleHeart = () => {
