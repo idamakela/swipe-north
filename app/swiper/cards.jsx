@@ -8,7 +8,7 @@ import styles from '../../styles/swiper.module.scss';
 import BigCard from "./BigCard";
 import jobs from "@/public/jobsData";
 
-import Icon from '../icon.js';
+
 
 // continue functions from this example: https://github.com/3DJakob/react-tinder-card-demo/blob/master/src/examples/Advanced.js
 
@@ -30,7 +30,7 @@ export default function Cards({
     //     //iconDescription[i] if true => correct icon
     // }
     const [currentJobIndex, setCurrentJobIndex] = useState(0);
-    const [showModal, setShowModal] = useState(false)
+    const [showModal, setShowModal] = useState(false);
 
     const handleClick = () => {
      setShowModal(true)
@@ -48,11 +48,33 @@ export default function Cards({
         localStorage.setItem(currentJob.id, JSON.stringify(jobs[currentJobIndex]));
         setCurrentJobIndex(currentJobIndex + 1);
         console.log(currentJob)
-      };
-      
+    };
+    
+ /*   const getIconDescription = (iconDescription) => {
+        let icon;
+        switch (iconDescription) {
+            case 'transport':
+                icon = <FaTaxi />;
+                break;
+            case 'remote':
+                icon = <BsWifi />;
+                break;
+            case 'local':
+                icon = <HiHome />;
+                break;
+            case 'hybrid':
+                icon = <SiHomeassistant />;
+                break;
+            default:
+                icon = <MdWork />;
+                break;
+    }
+    return icon;
 
+      };
+
+    */
     const currentJob = jobs[currentJobIndex];
-    const icon = 'icon';
     const fullDesc = jobbDescription;
     const words = fullDesc.split(' ');
     const selectedWords = words.slice(0, 15);
@@ -85,9 +107,7 @@ export default function Cards({
                                 <RxDoubleArrowUp />
                             </button>
                         </div>
-                        {/* this below needs logic to set right icon */}
-                        <p
-                            className={styles.icons}>{`${currentJob.icon} ${currentJob.percentajeJob}%`}</p>
+                        <p className={styles.icons}>{`${currentJob.icon} ${currentJob.percentajeJob}%`}</p>
                         <p>{`${currentJob.smallDesc}...`}</p>
                     </div>
                 </div>

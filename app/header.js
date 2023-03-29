@@ -8,7 +8,7 @@ export default function header(){
         <>
         <header className={styles['headerStyle']}>
             <div className={styles['logo']}>
-                <Link href="/" className={styles['linkstyle']}>
+                <Link href="./swiper" className={styles['linkstyle']}>
                     <img src="logo.png" alt="Skellefteå logo" style={{width: "115px"}}></img>
                 </Link>
             </div>

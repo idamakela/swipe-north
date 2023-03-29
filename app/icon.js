@@ -1,25 +1,30 @@
 import jobs from "../public/jobsData";
 import React from "react";
-import { FaTaxi, BsWifi, HiHome, SiHomeassistant } from 'react-icons/fa';
+import { FaTaxi} from 'react-icons/fa';
+import { SiHomeassistant } from "react-icons/si";
+import { BsWifi } from "react-icons/bs";
+import { HiHome  } from "react-icons/hi";
+import { MdWork} from "react-icons/md";
 
-
-export default function Icon ({jobs}) {
+export default function Icon (
+    
+) {
     
   const showIcon = () => {
     return (
         <ul>
             {items.map((item) => (
                 <li key={item.id}>
-                    {item.name}:{getIconDescription(item.IconDescription)}
+                    {item.name}:{getIconDescription(item.iconDescription)}
                 </li>
             )) }
         </ul>
     );
   };
 
-  const getIconDescription = (IconDescription) => {
+  const getIconDescription = (iconDescription) => {
     let icon;
-    switch (IconDescription) {
+    switch (iconDescription) {
         case 'transport':
             icon = <FaTaxi />;
             break;
@@ -29,8 +34,11 @@ export default function Icon ({jobs}) {
         case 'local':
             icon = <HiHome />;
             break;
-        default:
+        case 'hybrid':
             icon = <SiHomeassistant />;
+            break;
+        default:
+            icon = <MdWork />;
             break;
     }
 
