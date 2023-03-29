@@ -25,6 +25,9 @@ export default function Swiper() {
         //to see items id and direction of swipe
         console.log(`Card ID: ${job.id}, Direction: ${direction}`);
 
+        //changes current job
+        setCurrentCard(currentCard - 1);
+
         if (direction == 'up') {
             console.log('up motherfucker');
 
@@ -61,12 +64,10 @@ export default function Swiper() {
         //tindercards restoreCard()
     };
 
-    const handleHeart = (job) => {
-        //find current job
-        //swipe object up so handleSwipe and if up code fires
-
-        currentjob.swipe('up');
-    };
+    const handleHeart = (direction) => {
+        setCurrentCard(currentCard - 1);
+        console.log(currentjob)
+    }
 
     return (
         <>
@@ -79,7 +80,9 @@ export default function Swiper() {
                         key={job.id}
                         className={styles.swipe}
                         preventSwipe={['right', 'left']}
-                        onSwipe={(direction) => handleSwipe(direction, job)}
+                        onSwipe={(direction) =>
+                            handleSwipe(direction, job)
+                        }
                     >
                         <Cards {...job} />
                     </TinderCard>
@@ -88,7 +91,10 @@ export default function Swiper() {
                     <button className={styles.back}>
                         <Revert />
                     </button>
-                    <button className={styles.heart} onClick={(job) => handleHeart(job)}>
+                    <button
+                        className={styles.heart}
+                        onClick={() => handleSwipe('up')}
+                    >
                         <FaHeart />
                     </button>
                     <button className={styles.remove}>
