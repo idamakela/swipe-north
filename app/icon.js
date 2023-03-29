@@ -7,22 +7,9 @@ import { HiHome  } from "react-icons/hi";
 import { MdWork} from "react-icons/md";
 
 export default function Icon (
-    
+    {iconDescription}
 ) {
-    
-  const showIcon = () => {
-    return (
-        <ul>
-            {items.map((item) => (
-                <li key={item.id}>
-                    {item.name}:{getIconDescription(item.iconDescription)}
-                </li>
-            )) }
-        </ul>
-    );
-  };
-
-  const getIconDescription = (iconDescription) => {
+     
     let icon;
     switch (iconDescription) {
         case 'transport':
@@ -40,10 +27,7 @@ export default function Icon (
         default:
             icon = <MdWork />;
             break;
-    }
-
-    return icon;
-  };
- 
+    };
+  return icon;
    
 }

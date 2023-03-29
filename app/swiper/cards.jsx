@@ -7,7 +7,7 @@ import { RxDoubleArrowUp } from 'react-icons/rx';
 import styles from '../../styles/swiper.module.scss';
 import BigCard from "./BigCard";
 import jobs from "@/public/jobsData";
-
+import Icon from "../icon";
 
 
 // continue functions from this example: https://github.com/3DJakob/react-tinder-card-demo/blob/master/src/examples/Advanced.js
@@ -50,30 +50,6 @@ export default function Cards({
         console.log(currentJob)
     };
     
- /*   const getIconDescription = (iconDescription) => {
-        let icon;
-        switch (iconDescription) {
-            case 'transport':
-                icon = <FaTaxi />;
-                break;
-            case 'remote':
-                icon = <BsWifi />;
-                break;
-            case 'local':
-                icon = <HiHome />;
-                break;
-            case 'hybrid':
-                icon = <SiHomeassistant />;
-                break;
-            default:
-                icon = <MdWork />;
-                break;
-    }
-    return icon;
-
-      };
-
-    */
     const currentJob = jobs[currentJobIndex];
     const fullDesc = jobbDescription;
     const words = fullDesc.split(' ');
@@ -83,7 +59,7 @@ export default function Cards({
     const onSwipe = (direction) => {
         console.log('you swiped' + ' ' + direction);
     };
-
+ 
     return (
         <TinderCard
             className={styles.swipe}
@@ -107,7 +83,10 @@ export default function Cards({
                                 <RxDoubleArrowUp />
                             </button>
                         </div>
-                        <p className={styles.icons}>{`${currentJob.icon} ${currentJob.percentajeJob}%`}</p>
+                        <p className={styles.icons}>
+                            <Icon iconDescription={currentJob.iconDescription}/>
+                            {`${currentJob.percentajeJob}%`}
+                        </p>
                         <p>{`${currentJob.smallDesc}...`}</p>
                     </div>
                 </div>
