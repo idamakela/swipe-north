@@ -9,8 +9,8 @@ export default function Home() {
             <h1 className={styles.title}>SWIPE NORTH</h1>
               <h2 className={styles.subTitle}>- For a better everyday life</h2>
               <div className={styles.infoText}>
-              Explore job opportunities and a better everyday life in Skellefteå
-               - a city thats growing exponentially and surrounded by breathtaking nature.
+              Explore job opportunities for a new beginning in <span className={styles.city}>Skellefteå</span>.
+              <br/>A city thats growing exponentially and surrounded by breathtaking nature.
               </div>
               <div className={styles.animationContainer}>
                 <Link href="/swiper" ><h3 className={styles.swipe}>SWIPE UP</h3></Link>

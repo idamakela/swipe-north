@@ -2,7 +2,7 @@ import { Readex_Pro } from "next/font/google";
 import "../styles/globals.scss";
 import Header from "./header.js"
 import Image from 'next/image'
-import backgroundImg from '../public/background.png'
+import backgroundImg from '../public/background1.png'
 
 
 export const metadata = {

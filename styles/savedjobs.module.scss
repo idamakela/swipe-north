@@ -4,11 +4,18 @@
     display: flex;
     gap: 8px;
     background-color: $light-color;
-    border: 1px solid $dark-color;
     padding: 16px;
+    margin: 8px;
 }
 
-.bigImg {
+.goBack {
+    font-size: 24px;
+    position: absolute;
+    left: 5vw;
+    top: 88px;
+}
+
+.img {
     border-radius: 5px;
 }
 
@@ -53,6 +60,7 @@
 }
 
 .close {
+    color: $red-color;
     font-size: 16px;
     font-weight: 600;
 }

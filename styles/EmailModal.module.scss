@@ -34,12 +34,17 @@
 }
 
 .open {
-    background-color: rgba(0, 0, 0, 0.1);
-    color: $dark-green;
+    background-color: $dark-yellow;
+    color: white;
     font-size: 1.6rem;
-    margin: 0;
-    padding: 8px;
+    font-weight: 400;
+    letter-spacing: 1px;
+    margin: 0 8px;
+    padding: 12px;
+    position: fixed;
     text-align: center;
+    top: 92vh;
+    width: calc(100% - 16px);
 }
 
 .paragraph {
@@ -64,7 +69,7 @@
   
   @keyframes pulse-animation {
     0% {
-      box-shadow: 0 0 0 0px rgba(0, 0, 0, 0.2);
+      box-shadow: 0 0 0 0px rgba(0, 0, 0, 0.3);
     }
     100% {
       box-shadow: 0 0 0 16px rgba(0, 0, 0, 0);
