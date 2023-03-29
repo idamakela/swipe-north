@@ -15,7 +15,7 @@ export default function Filter(
     const options = [
         {value: "Administration", label:"Administration"},
         {value: "It-Consult", label:"It-Consult"},
-        {value: "It-Suppor",label:"It-Support"},
+        {value: "It-Support",label:"It-Support"},
         {value: "Konstruktör", label:"Konstruktör"},
         {value: "Restaurang", label:"Restaurang"},
         {value: "Säkerhetsarbete", label:"Säkerhetsarbete"},

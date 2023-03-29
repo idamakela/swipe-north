@@ -123,7 +123,7 @@ const jobs = [
      {  
       id: 7,
       title: "Kock",
-      profession: "restaurang",
+      profession: "Restaurang",
       company:"Kågeskola",
       picture: './images/Kock.jpg' ,
       area: "Skellefteå",
@@ -143,7 +143,7 @@ const jobs = [
      {  
       id: 8,
       title: "Agil projektledare",
-      profession: "It-support",
+      profession: "It-Support",
       company:"Skellefteå Kommun",
       picture: './images/agil.jpg',
       area: "Skellefteå",
@@ -243,7 +243,7 @@ const jobs = [
     {  
       id: 13,
       title: "Chief Engineeer Plant & Piping",
-      profession: "konstruktör, tillverkningsindustri",
+      profession: "Konstruktör",
       company:"Poolia Sverige AB",
       picture: './images/ChiefEngineer.jpg',
       area: "Skellefteå",
@@ -263,7 +263,7 @@ const jobs = [
     {  
       id: 14,
       title: "Senior fullstackutvecklare",
-      profession: "It-consult",
+      profession: "It-Consult",
       company:"PersonalExpressen AB",
       picture: './images/Fullstackutvecklare.jpg',
       area: "Skellefteå",
