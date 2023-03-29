@@ -85,7 +85,7 @@ export default function Cards({
                         </div>
                         <p className={styles.icons}>
                             <Icon iconDescription={currentJob.iconDescription}/>
-                            {`${currentJob.percentajeJob}%`}
+                            {` ${currentJob.percentajeJob}%`}
                         </p>
                         <p>{`${currentJob.smallDesc}...`}</p>
                     </div>
