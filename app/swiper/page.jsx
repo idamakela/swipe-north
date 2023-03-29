@@ -12,33 +12,41 @@ const TinderCard = dynamic(() => import('react-tinder-card'), { ssr: false });
 
 export default function Swiper() {
     const [jobs, setJobs] = useState(data.slice(0, 7)); //sets data, from index 0-7
+    const [currentjob, setCurrentJob] = useState(jobs[jobs.length - 1]);
 
+    //reload localstorage on page reload
+    useEffect(() => {
+        localStorage.clear();
+        console.log('Page reloaded!');
+    }, []);
+
+    //handles the swipes and execudes code depending on direction
     const handleSwipe = (direction, job) => {
+        //to see items id and direction of swipe
         console.log(`Card ID: ${job.id}, Direction: ${direction}`);
 
         if (direction == 'up') {
             console.log('up motherfucker');
 
-            //saves (incorrect) item in localstorage
+            //saves item in localstorage
             const savedJobs =
                 JSON.parse(localStorage.getItem('savedJobs')) || [];
             savedJobs.push(job.id);
             localStorage.setItem('savedJobs', JSON.stringify(savedJobs));
 
-            //see whats in localstorage in specific key
+            //see what keys are in localstorage in specific place
             const myStorage = localStorage.getItem('savedJobs');
             console.log(myStorage);
 
             //views value for spec key in localstorage
             for (let i = 0; i < localStorage.length; i++) {
-                const key = localStorage.key(i)
-                const value = localStorage.getItem(key)
-                console.log(key, value)
+                const key = localStorage.key(i);
+                const value = localStorage.getItem(key);
+                console.log(key, value);
             }
         }
 
         if (direction == 'down') {
-
         }
     };
 
@@ -53,8 +61,11 @@ export default function Swiper() {
         //tindercards restoreCard()
     };
 
-    const handleHeart = () => {
-        //swipe object up
+    const handleHeart = (job) => {
+        //find current job
+        //swipe object up so handleSwipe and if up code fires
+
+        currentjob.swipe('up');
     };
 
     return (
@@ -77,7 +88,7 @@ export default function Swiper() {
                     <button className={styles.back}>
                         <Revert />
                     </button>
-                    <button className={styles.heart}>
+                    <button className={styles.heart} onClick={(job) => handleHeart(job)}>
                         <FaHeart />
                     </button>
                     <button className={styles.remove}>
