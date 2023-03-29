@@ -4,21 +4,18 @@ import styles from '../../styles/savedjobs.module.scss'
 import EmailModal from '../components/EmailModal';
 
 function SavedJobs() {
-  const [savedJobs, setSavedJobs] = useState([]);
+  const [savedJobs, setSavedJobs] = useState([0]);
 
-    //why use map here?? maybe should only be retrieving the data
   useEffect(() => {
-    const savedJobsData = Object.keys(localStorage).map((key) => JSON.parse(localStorage.getItem(key)))
-    if (savedJobsData) {
-      setSavedJobs(savedJobsData);
-    }
+      const savedJobsData = JSON.parse(localStorage.getItem('savedJobs')) || [];
+          if (savedJobsData) {
+              setSavedJobs(
+                  savedJobsData.map((job) => ({ ...job, heartFilled: true }))
+              );
+          }
   }, []);
 
-  //chatGPTs example
-//   useEffect(() => {
-//     const storedObject = localStorage.getItem('myObject');
-//     setMyObject(JSON.parse(storedObject));
-//   }, []);
+  
 
   const handleClickClose = (id) => {
     localStorage.removeItem(id);
@@ -28,7 +25,7 @@ function SavedJobs() {
   return (
     <>
     <h1 className={styles.title}>Saved Jobs</h1>
-    <EmailModal />
+      <EmailModal />
     <div className={styles.savedJobsContainer}>
       {savedJobs.map(job => (
         <div className={styles.savedJobsList} key={job.id}>
