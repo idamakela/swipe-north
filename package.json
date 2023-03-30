@@ -11,6 +11,8 @@
   "dependencies": {
     "@formkit/auto-animate": "^1.0.0-beta.6",
     "@react-spring/web": "^9.5.5",
+    "animate": "^1.0.0",
+    "auto": "^10.43.0",
     "date-fns": "^2.29.3",
     "eslint": "8.36.0",
     "eslint-config-next": "13.2.4",
