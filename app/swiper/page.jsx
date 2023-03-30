@@ -15,10 +15,10 @@ export default function Swiper() {
     const [currentJobIndex, setCurrentJobIndex] = useState(jobs.length - 1);
 
     //reload localstorage on page reload ONLY FOR DEV ENVIRONMENT!!!
-    useEffect(() => {
-        localStorage.clear();
-        console.log('Page reloaded!');
-    }, []);
+    // useEffect(() => {
+    //     localStorage.clear();
+    //     console.log('Page reloaded!');
+    // }, []);
 
     const handleSwipe = (direction, job) => {
         console.log(`Card ID: ${job.id}, Direction: ${direction}`);
