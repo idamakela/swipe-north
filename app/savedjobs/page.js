@@ -42,14 +42,7 @@ function SavedJobs() {
                 <h4 className={styles.company}>{job.company}</h4>
               </div>
               
-              <div className={styles.icons}>
-                {job.liked ? (
-                  <span onClick={() => handleLike(job.id)} className={styles.heartLiked}>♥</span>
-                ) : (
-                  <span onClick={() => handleLike(job.id)} className={styles.heart}>♡</span>
-                )}
-              </div>
-
+             
 
               <div onClick={() => handleClickClose(job.id)} className={styles.close}>⊗</div>
             </div>
