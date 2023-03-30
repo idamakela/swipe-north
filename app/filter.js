@@ -29,9 +29,6 @@ export default function Filter(
     return (
     <>
     <Select onChange={ (event)=> {
-        
-      
-
         setF(event.value)
     }
 
