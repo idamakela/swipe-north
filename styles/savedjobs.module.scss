@@ -1,134 +1,63 @@
 @import 'variables';
-@import'mixins';
 
 
-.savedJobsContainer {
-    margin-top: 3vh;
-}
+.savedJoblist {
 
-////
-$dark-color: #000000;
-$medium-color: #272727;
-$light-color: #ffffff;
-$light-green: #9EB45A;
-$dark-green: #7B932E;
-$light-yellow: #D3B73D;
-$dark-yellow: #C1A016;
-$red-color: #8B341F;
-$readex-pro: 'Readex Pro', sans-serif;
-$base-pixel: 10px;
-
-$card-width: 300px;
-$card-height: 150px;
-
-
-.savedJobsContainer{
-  display: inline;
-  flex-wrap: wrap;
-
-
-}
-  
-.title {
-  font-size: 24px;
-  font-weight: bold;
-  margin-bottom: 20px;
-}
-  
- .savedJobsList {
-  
-  display: inline-flex;
-   margin-bottom: 20px;
-   width: $card-width;
-   text-align: center;
-  background-color: $light-color;
-  border: 2px solid $dark-color;
-  padding: 20px;
-  color:$dark-color;
-  }
-//.imgContainer{
-  //margin-right: 1px;
-//}
-  .bigImg {
-  max-width: 100px;
-  max-height: 200px;
-  border-radius: 10px;
- 
-  
-
- 
-  .icons {
-    font-size: 20px;
-    margin: 10px;
-  }
-
-  
-  }
-  
-  .company {
-    font-size:13px ;
-    color:$dark-color;
-  }
-  
-  
-  .close{
-    cursor: pointer;
-    font-size: 24px;
-   margin-left: 100px;
-   left: 15px;
-
-   
-  }
-
-.icons{
   display: flex;
-  align-items: center;
-  color: non;
+  gap: 8px;
+  background-color: $light-color;
+  padding: 16px;
+  margin: 8px;
+}
+.goBack {
+  font-size: 24px;
+  position: absolute;
+  left: 5vw;
+  top: 88px;
+}
+  
+.img {
+  border-radius: 5px ;
+}
+
+.infocontainer {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  width: 100%;
+}
  
- 
+.innerText {
+  display: flex;
+  justify-content: space-between;
+
+}
+.title {
+  text-align: center;
+  font-size: 36px;
+  margin: 8px 0 12px;
 }
 
-.heart, .heartLinked {
-  cursor: pointer;
-  font-size: 20px;
-  margin-top: 5px;
-}
-.heartLinked{
-  color: #8B341F;
-}
-.heart{
-  color: #8B341F;
-  border: 2px solid var(#8B341F);
+.jobTitle {
+  font-size: 18px;
+  margin: 0;
+
 }
 
-.heart:hover{
-  color: #e61919;
-  border-color: #8B341F;
+.close {
+  color: $red-color;
+  font-size: 16px;
+  font-weight: 600;
 }
 
-  
-  .jobTitle{
-  font-size: 13px;
-   margin: 1px;
-    
+.paragraph {
+  background-color: #fff;
+  font-size: 16px;
+  margin: 0;
+  padding: 8px;
+  text-align: center;
+}
 
-    text-align: center;
-  }
-
-  .infoContainer {
-   display: flex;
-   flex-direction: column;
-   justify-content: space-between;
-   width: $card-width;
-   
-  
-  
-  }
-  
-  
-  
-  
- 
 
 
   
