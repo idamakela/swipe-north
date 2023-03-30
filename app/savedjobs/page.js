@@ -17,7 +17,10 @@ function SavedJobs() {
         );
         if (savedJobsData) {
             setSavedJobs(
-                savedJobsData.map((job) => ({ ...job, heartFilled: true }))
+                savedJobsData.map((job) => ({
+                    ...job,
+                    heartFilled: true,
+                }))
             );
         }
     }, []);
@@ -66,11 +69,7 @@ function SavedJobs() {
                                     onClick={() => handleClickClose(job.id)}
                                     className={styles.close}
                                 >
-                                    {job.heartFilled ? (
-                                        <VscHeartFilled />
-                                    ) : (
-                                        <VscHeart />
-                                    )}
+                                    <VscHeartFilled />
                                 </div>
                             </div>
                             <h4
