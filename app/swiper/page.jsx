@@ -12,6 +12,13 @@ const TinderCard = dynamic(() => import('react-tinder-card'), { ssr: false });
 
 export default function Swiper() {
     const [jobs, setJobs] = useState(data.slice(0, 7)); //sets data, from index 0-7
+    const [currentJobIndex, setCurrentJobIndex] = useState(jobs.length - 1);
+
+    //reload localstorage on page reload ONLY FOR DEV ENVIRONMENT!!!
+    useEffect(() => {
+        localStorage.clear();
+        console.log('Page reloaded!');
+    }, []);
 
     const handleSwipe = (direction, job) => {
         console.log(`Card ID: ${job.id}, Direction: ${direction}`);
@@ -19,26 +26,15 @@ export default function Swiper() {
         if (direction == 'up') {
             console.log('up motherfucker');
 
-            //saves (incorrect) item in localstorage
-            const savedJobs =
-                JSON.parse(localStorage.getItem('savedJobs')) || [];
-            savedJobs.push(job.id);
-            localStorage.setItem('savedJobs', JSON.stringify(savedJobs));
+            localStorage.setItem(job.id, JSON.stringify(job));
 
             //see whats in localstorage in specific key
-            const myStorage = localStorage.getItem('savedJobs');
+            const myStorage = localStorage.setItem(job.id, JSON.stringify(job));
             console.log(myStorage);
-
-            //views value for spec key in localstorage
-            for (let i = 0; i < localStorage.length; i++) {
-                const key = localStorage.key(i)
-                const value = localStorage.getItem(key)
-                console.log(key, value)
-            }
         }
 
         if (direction == 'down') {
-
+            
         }
     };
 
@@ -46,6 +42,7 @@ export default function Swiper() {
         //take the objects id
         //swipe it down
         //handleSwipe
+
     };
 
     const handleUndo = () => {
