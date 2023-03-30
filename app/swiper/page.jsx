@@ -20,7 +20,7 @@ export default function Swiper() {
 
     return (
         <>
-            <div className={styles.title}>
+            <div className={styles.titleFilter}>
                 <Filter f={filtrering} setF={setFiltrering}
                 />
             </div>

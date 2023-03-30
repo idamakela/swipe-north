@@ -1,8 +1,11 @@
 @import 'variables';
 @import 'mixins';
 
-.title {
+.titleFilter {
     background-color: transparent;
+    margin: auto;
+    width: 90%;
+    font-size: 2em;
 }
 
 .swipe {
@@ -13,6 +16,7 @@
     display: flex;
     justify-content: center;
     margin-top: 2vh;
+
 }
 
 .card {
