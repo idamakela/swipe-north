@@ -1,8 +1,9 @@
 import React from 'react'
 import { RxDoubleArrowDown } from "react-icons/rx";
 import styles from '../../styles/BigCard.module.scss'
+import Icon from "../icon";
 
-export default function BigCard({ id, setShowModal, title, company, jobbDescription, experience, aboutUs }) {
+export default function BigCard({ id, setShowModal, title, company, jobbDescription, iconDescription, percentajeJob, experience, aboutUs }) {
 
   const handleClick = () => {
     setShowModal(false)
@@ -22,7 +23,7 @@ export default function BigCard({ id, setShowModal, title, company, jobbDescript
                     </div>
                      <button className={`${styles.btn} ${styles.pulse}`}>ANSÖK HÄR!</button>
                     {/* this below needs logic to set right icon */}
-                    <p className={styles.icons}>*icons*</p>
+                    <p className={styles.icons}><Icon iconDescription={iconDescription}/>{` ${percentajeJob}%`}</p>
                     <h4 className={styles.subTitle}>Vi söker dig som:</h4>
                     <p className={styles.paragraph}>{jobbDescription}</p>
                     <h4 className={styles.subTitle}>Erfarenheter</h4>
