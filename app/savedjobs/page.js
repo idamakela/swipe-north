@@ -1,7 +1,7 @@
 'use client';
 import React, { useState, useEffect } from 'react';
 import styles from '../../styles/savedjobs.module.scss';
-//import EmailModal from '../components/EmailModal';
+import EmailModal from '../components/EmailModal';
 import { VscHeartFilled, VscHeart, VscArrowLeft } from 'react-icons/vsc';
 import { useAutoAnimate } from '@formkit/auto-animate/react';
 import Link from 'next/link';

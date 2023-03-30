@@ -1,7 +1,6 @@
 import { useState } from 'react';
 import styles from '../../styles/EmailModal.module.scss'
 import { BsBellFill } from "react-icons/bs";
-
 const EmailModal = () => {
   const [showModal, setShowModal] = useState(false);
   const [firstName, setFirstName] = useState('');
