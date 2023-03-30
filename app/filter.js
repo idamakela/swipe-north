@@ -1,36 +1,41 @@
 'use client';
-import jobs from "../public/jobsData";
 import React from "react";
+//import React, { useState } from "react";
+import jobs from "../public/jobsData";
 import Cards from './swiper/cards';
-//import styles from '../../styles/swiper.module.scss';
-
-import { useState } from "react";
-import styles from '../styles/filter.module.scss';
-//import jobs from './public/jobsData'
+//import styles from '../styles/filter.module.scss';
+import Select from 'react-select'
 
 
-export default function JobList({jobs}) {
-
-  const [profession, setProfession] = useState({jobs});
-
-
-  return (
+export default function Filter(
+    {f, setF}
     
-    <div className={styles.jobfilter}>
-      <select className={styles.selector}>
-        <option value="">Alla yrken</option>
-	      <option value="Administration">Administration</option>
-        <option value="It-Consult">It-Consult</option>
-	      <option value="It-Support">It-Support</option>
-        <option value="Konstruktör">Konstruktör</option>
-        <option value="Restaurang">Restaurang</option>
-        <option value="Säkerhetsarbete">Säkerhetsarbete</option>
-        <option value="Transport">Transport</option>
-        <option value="Underhåll">Underhåll</option>
-        <option value="Utbildning">Utbildning</option>
-        <option value="Vård och Omsorg">Vård och omsorg</option> 
-      </select>
-    </div>
+) {
+
+    const options = [
+        {value: "Administration", label:"Administration"},
+        {value: "It-Consult", label:"It-Consult"},
+        {value: "It-Support",label:"It-Support"},
+        {value: "Konstruktör", label:"Konstruktör"},
+        {value: "Restaurang", label:"Restaurang"},
+        {value: "Säkerhetsarbete", label:"Säkerhetsarbete"},
+        {value: "Transport", label:"Transport"},
+        {value: "Underhåll", label:"Underhåll"},
+        {value: "Utbildning", label:"Utbildning"},
+        {value: "Vård och omsorg", label:"Vård och omsorg"},
+    ];
+
+ //const [profession, setProfession] = useState({jobs});
+    return (
+    <>
+    <Select onChange={ (event)=> {
+        setF(event.value)
+    }
+
+    } options={options} />
+    
+    </>
   )
-}
+};
+
 
