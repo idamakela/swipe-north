@@ -3,13 +3,12 @@
 .bigCard {
     background-color: $light-color;
     border-radius: 10px;
-    bottom: 70vh;
     box-shadow: 0px 18px 53px 0px rgba(0, 0, 0, 1);
-    min-height: 600px;
-    margin: 8px auto;
+    min-height: 570px;
     padding: 40px;
-    position: relative;
-    width: 100%;
+    position: absolute;
+    top: 10vh;
+    width: 100vw;
 }
 
 .mainInfo {
@@ -69,7 +68,7 @@
       box-shadow: 0 0 0 0px rgba(0, 0, 0, 0.2);
     }
     100% {
-      box-shadow: 0 0 0 10px rgba(0, 0, 0, 0);
+      box-shadow: 0 0 0 16px rgba(0, 0, 0, 0);
     }
   }
 

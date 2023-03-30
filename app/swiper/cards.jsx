@@ -1,110 +1,107 @@
-"use client";
-import { useState } from "react";
-import TinderCard from 'react-tinder-card';
-import { FaHeart } from 'react-icons/fa';
-import { Close, Revert } from 'grommet-icons';
+'use client';
+import { useState } from 'react';
 import { RxDoubleArrowUp } from 'react-icons/rx';
 import styles from '../../styles/swiper.module.scss';
-import BigCard from "./BigCard";
-import jobs from "@/public/jobsData";
 import Icon from "../icon";
+import BigCard from './BigCard';
+import dynamic from 'next/dynamic';
+import jobsArray from '../../public/jobsData.js';
 
-
-// continue functions from this example: https://github.com/3DJakob/react-tinder-card-demo/blob/master/src/examples/Advanced.js
+const TinderCard = dynamic(() => import('react-tinder-card'), { ssr: false });
 
 export default function Cards({
     id,
     picture,
-    /*imgAlt,*/
     title,
     company,
     iconDescription,
     percentajeJob,
     jobbDescription,
     aboutUs,
-    lastDate, 
+    lastDate,
     experience,
-    //contactEmail
 }) {
-    // function icon () {
-    //     //iconDescription[i] if true => correct icon
-    // }
-    const [currentJobIndex, setCurrentJobIndex] = useState(0);
+
     const [showModal, setShowModal] = useState(false);
 
-    const handleClick = () => {
-     setShowModal(true)
-    }
-
-    const handleNextClick = () => {
-      setCurrentJobIndex(currentJobIndex + 1);
-    };
-  
-    const handlePrevClick = () => {
-      setCurrentJobIndex(currentJobIndex - 1);
-    };
-
-    const handleSaveClick = () => {
-        localStorage.setItem(currentJob.id, JSON.stringify(jobs[currentJobIndex]));
-        setCurrentJobIndex(currentJobIndex + 1);
-        console.log(currentJob)
-    };
-    
-    const currentJob = jobs[currentJobIndex];
     const fullDesc = jobbDescription;
     const words = fullDesc.split(' ');
     const selectedWords = words.slice(0, 15);
     const smallDesc = selectedWords.join(' ');
 
-    const onSwipe = (direction) => {
-        console.log('you swiped' + ' ' + direction);
+    const handleClick = () => {
+     setShowModal(true)
+    }
+
+    const handleSwipe = (direction, id) => {
+        console.log(`Card ID: ${id}, Direction: ${direction}`);
+
+        let currentData = null;
+
+        //data manipulation for localstorage
+        for (let i = 0; i <= jobsArray.length - 1; i++) {
+            if (jobsArray[i].id === id) {
+                currentData = jobsArray[i];
+            } else {
+                continue;
+            }
+        }
+
+        if (direction == 'up') {
+            console.log('up if works');
+
+            localStorage.setItem(id, JSON.stringify(currentData));
+
+            //see whats in localstorage in specific key
+            const myStorage = localStorage.setItem(
+                id,
+                JSON.stringify(currentData)
+            );
+            console.log(myStorage);
+        }
     };
  
     return (
-        <TinderCard
-            className={styles.swipe}
-            key={id}
-            preventSwipe={['down']}
-            onSwipe={onSwipe}>
-            <div className={styles.card}>
-                <div className={styles.upperElements}>
+        <>
+                <TinderCard
+                    className={styles.swipe}
+                    preventSwipe={['right', 'left']}
+                    onSwipe={(direction) => handleSwipe(direction, id)}
+                >
+                    <div className={styles.card}>
+                    <div className={styles.upperElements}>
                     <div className={styles.imgContainer}>
-                        <img
-                            src={currentJob.picture}
-                            /*alt={imgAlt}*/ height="200px"
-                            width="200px"
-                        />
+                        <img src={picture} height="200px" width="200px" />
                     </div>
                     <div className={styles.text}>
                         <div className={styles.header}>
-                            <h3 className={styles.title}>{currentJob.title}</h3>
-                            <h4 className={styles.company}>{currentJob.company}</h4>
+                            <h3 className={styles.title}>{title}</h3>
+                            <h4 className={styles.company}>{company}</h4>
                             <button className={styles.more} onClick={handleClick}>
                                 <RxDoubleArrowUp />
                             </button>
                         </div>
                         <p className={styles.icons}>
-                            <Icon iconDescription={currentJob.iconDescription}/>
-                            {` ${currentJob.percentajeJob}%`}
+                            <Icon iconDescription={iconDescription}/>
+                            {` ${percentajeJob}%`}
                         </p>
-                        <p>{`${currentJob.smallDesc}...`}</p>
+                        <p>{`${smallDesc}...`}</p>
                     </div>
                 </div>
-                <div className={styles.btnContainer}>
-                    <button className={styles.back} disabled={currentJobIndex === 0} onClick={handlePrevClick}>
-                        <Revert />
-                    </button>
-                    <button className={styles.heart} onClick={handleSaveClick}>
-                        <FaHeart />
-                    </button>
-                    <button className={styles.remove}  disabled={currentJobIndex === jobs.length - 1} onClick={handleNextClick}>
-                        <Close />
-                    </button>
-                </div>
             </div>
-            {showModal && (
-              <BigCard id={id} job={currentJob} setShowModal={setShowModal}/>
-            )}
-        </TinderCard>
+            </TinderCard>
+                {showModal && (
+                    <BigCard
+                        id={id}
+                        title={title}
+                        company={company}
+                        setShowModal={setShowModal}
+                        jobbDescription={jobbDescription}
+                        experience={experience}
+                        aboutUs={aboutUs}
+                    />
+                )}
+        </>
+
     );
 }

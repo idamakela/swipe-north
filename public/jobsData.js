@@ -1,4 +1,3 @@
-
 const jobs = [
     {
       id: 1,
@@ -282,9 +281,7 @@ const jobs = [
      }
   ];
 
-
-  
-  export default jobs
+export default jobs;
 
 /*
 Nurse: Photo by Mat Napo on Unsplash

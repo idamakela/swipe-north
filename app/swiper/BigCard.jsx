@@ -2,7 +2,7 @@ import React from 'react'
 import { RxDoubleArrowDown } from "react-icons/rx";
 import styles from '../../styles/BigCard.module.scss'
 
-export default function BigCard({ id, setShowModal, job }) {
+export default function BigCard({ id, setShowModal, title, company, jobbDescription, experience, aboutUs }) {
 
   const handleClick = () => {
     setShowModal(false)
@@ -13,8 +13,8 @@ export default function BigCard({ id, setShowModal, job }) {
             <div className={styles.text}>
                     <div className={styles.mainInfo}>
                       <div>
-                        <h3 className={styles.title}>{job.title}</h3>
-                        <h4 className={styles.company}>{job.company}</h4>
+                        <h3 className={styles.title}>{title}</h3>
+                        <h4 className={styles.company}>{company}</h4>
                       </div>
                         <button className={styles.more} onClick={handleClick}>
                             <RxDoubleArrowDown />
@@ -24,11 +24,11 @@ export default function BigCard({ id, setShowModal, job }) {
                     {/* this below needs logic to set right icon */}
                     <p className={styles.icons}>*icons*</p>
                     <h4 className={styles.subTitle}>Vi söker dig som:</h4>
-                    <p className={styles.paragraph}>{job.jobbDescription}</p>
+                    <p className={styles.paragraph}>{jobbDescription}</p>
                     <h4 className={styles.subTitle}>Erfarenheter</h4>
-                    <p className={styles.paragraph}>{job.experience}</p>
+                    <p className={styles.paragraph}>{experience}</p>
                     <h4 className={styles.subTitle}>Om oss</h4>
-                    <p className={styles.paragraph}>{job.aboutUs}</p>
+                    <p className={styles.paragraph}>{aboutUs}</p>
                     <h4 className={styles.subTitle}>Kontaktuppgifter</h4>
                     <p className={styles.paragraph}>Test@ansökhär.com</p>
                     <h4 className={styles.last}>Sista ansökningsdatum <span className={styles.date}>2023-05-04</span></h4>
