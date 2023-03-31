@@ -6,12 +6,10 @@ import Link from 'next/link';
 export default function Home() {
     return <main className={styles.main}>
            <div className={styles.hero}>
-            <h1 className={styles.title}>SWIPE NORTH</h1>
-              <h2 className={styles.subTitle}>- For a better everyday life</h2>
-              <div className={styles.infoText}>
-              Explore job opportunities for a new beginning in <span className={styles.city}>Skellefteå</span>.
-              <br/>A city thats growing exponentially and surrounded by breathtaking nature.
-              </div>
+            <div>
+              <h1 className={styles.title}>SWIPE NORTH</h1>
+              <h2 className={styles.subTitle}>For a new beginning in Skellefteå</h2>
+            </div>
               <div className={styles.animationContainer}>
                 <Link href="/swiper" ><h3 className={styles.swipe}>SWIPE UP</h3></Link>
                  <Link href="/swiper" >
