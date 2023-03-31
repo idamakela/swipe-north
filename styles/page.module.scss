@@ -24,8 +24,10 @@
   .subTitle {
     font-size: 20px;
     font-weight: 400;
+    letter-spacing: 1px;
     margin: 0;
     text-shadow: 2px 2px 5px $dark-color;
+    text-transform: capitalize;
     width: 100%;
   }
 
