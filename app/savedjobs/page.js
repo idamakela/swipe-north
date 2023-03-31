@@ -5,6 +5,7 @@ import EmailModal from '../components/EmailModal';
 import { VscHeartFilled, VscHeart, VscArrowLeft } from 'react-icons/vsc';
 import { useAutoAnimate } from '@formkit/auto-animate/react';
 import Link from 'next/link';
+import Icon from '../icon';
 
 function SavedJobs() {
     const [savedJobs, setSavedJobs] = useState([0]);
@@ -72,9 +73,10 @@ function SavedJobs() {
                                     <VscHeartFilled />
                                 </div>
                             </div>
-                            <h4
-                                className={styles.icons}
-                            >{`${job.icon} ${job.percentajeJob}%`}</h4>
+                            <h4 className={styles.icons}>
+                                <Icon iconDescription={job.iconDescription} />
+                                {` ${job.percentajeJob}%`}
+                            </h4>
                         </div>
                     </div>
                 ))}

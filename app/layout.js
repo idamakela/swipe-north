@@ -4,7 +4,6 @@ import Header from "./header.js"
 import Image from 'next/image'
 import backgroundImg from '../public/background1.png'
 
-
 export const metadata = {
     title: "Swipe North",
     description: "",

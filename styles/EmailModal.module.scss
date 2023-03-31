@@ -14,8 +14,8 @@
 }
 
 .form {
-   display: flex;
-   flex-direction: column; 
+    display: flex;
+    flex-direction: column;
 }
 
 .input {
@@ -65,13 +65,13 @@
 
 .pulse {
     animation: pulse-animation 2s infinite;
-  }
-  
-  @keyframes pulse-animation {
+}
+
+@keyframes pulse-animation {
     0% {
-      box-shadow: 0 0 0 0px rgba(0, 0, 0, 0.3);
+        box-shadow: 0 0 0 0px rgba(0, 0, 0, 0.3);
     }
     100% {
-      box-shadow: 0 0 0 16px rgba(0, 0, 0, 0);
+        box-shadow: 0 0 0 16px rgba(0, 0, 0, 0);
     }
-  }
+}
