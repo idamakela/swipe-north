@@ -1,18 +1,5 @@
-@import 'variables';
-
-$dark-color: #000000;
-$medium-color: #272727;
-$light-color: #ffffff;
-$light-green: #9EB45A;
-$dark-green: #7B932E;
-$light-yellow: #D3B73D;
-$dark-yellow: #C1A016;
-$red-color: #8B341F;
-$readex-pro: 'Readex Pro', sans-serif;
-$base-pixel: 10px;
 
 @import 'variables';
-
 .savedJobsList {
     display: flex;
     gap: 8px;
