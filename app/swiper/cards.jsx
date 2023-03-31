@@ -96,6 +96,8 @@ export default function Cards({
                         title={title}
                         company={company}
                         setShowModal={setShowModal}
+                        iconDescription={iconDescription}
+                        percentajeJob={percentajeJob}
                         jobbDescription={jobbDescription}
                         experience={experience}
                         aboutUs={aboutUs}
