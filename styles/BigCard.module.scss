@@ -1,93 +1,93 @@
 @import 'variables';
 
 .bigCard {
-    background-color: $light-color;
-    border-radius: 10px;
-    box-shadow: 0px 18px 53px 0px rgba(0, 0, 0, 1);
-    min-height: 570px;
-    padding: 40px;
-    position: absolute;
-    top: 10vh;
-    width: 100vw;
+  background-color: $light-color;
+  border-radius: 10px;
+  box-shadow: 0px 18px 53px 0px rgba(0, 0, 0, 1);
+  min-height: 570px;
+  padding: 40px;
+  position: absolute;
+  top: 10vh;
+  width: 100vw;
 }
 
 .mainInfo {
-    display: flex;
-    justify-content: space-between;
+  display: flex;
+  justify-content: space-between;
 }
 .title {
-    font-size: 2.4rem;
-    margin: 0;
+  font-size: 2.4rem;
+  margin: 0;
 }
 
 .company {
-    font-size: 1.8rem;
-    font-weight: 400;
-    margin: 4px 0;
+  font-size: 1.8rem;
+  font-weight: 400;
+  margin: 4px 0;
 }
 
 .subTitle {
-    font-size: 1.6rem;
-    margin: 0;
-    padding: 0;
+  font-size: 1.6rem;
+  margin: 0;
+  padding: 0;
 }
 
 .paragraph {
-    font-size: 1.4rem;
-    padding: 0;
-    margin: 0;
-    margin-bottom: 16px;
+  font-size: 1.4rem;
+  padding: 0;
+  margin: 0;
+  margin-bottom: 16px;
 }
 
 .list {
-    font-size: 1.4rem;
-    margin: 0;
-    margin-bottom: 16px;
-    padding: 0;
-    padding-left: 12px;
+  font-size: 1.4rem;
+  margin: 0;
+  margin-bottom: 16px;
+  padding: 0;
+  padding-left: 12px;
 }
 
 .btn {
-    background: linear-gradient(45deg, $dark-green, $light-green);
-    border: none;
-    color: #fff;
-    font-size: 1.6rem;
-    margin: 10px auto 8px;
-    padding: 12px 30px;
-    text-transform: uppercase;
-    transition: 0.25s;
-    width: 100%;
+  background: linear-gradient(45deg, $dark-green, $light-green);
+  border: none;
+  color: #fff;
+  font-size: 1.6rem;
+  margin: 10px auto 8px;
+  padding: 12px 30px;
+  text-transform: uppercase;
+  transition: 0.25s;
+  width: 100%;
 }
 
 .pulse {
-    animation: pulse-animation 2s infinite;
+  animation: pulse-animation 2s infinite;
+}
+
+@keyframes pulse-animation {
+  0% {
+    box-shadow: 0 0 0 0px rgba(0, 0, 0, 0.2);
   }
-  
-  @keyframes pulse-animation {
-    0% {
-      box-shadow: 0 0 0 0px rgba(0, 0, 0, 0.2);
-    }
-    100% {
-      box-shadow: 0 0 0 16px rgba(0, 0, 0, 0);
-    }
+  100% {
+    box-shadow: 0 0 0 16px rgba(0, 0, 0, 0);
   }
+}
 
 .more {
-    align-items: center;
-    border: none;
-    background-color: transparent;
-    display: flex;
-    font-size: 1.6rem;
-    justify-content: center;
-    height: 2rem;
-    padding: $base-pixel;
+  align-items: center;
+  border: none;
+  background-color: transparent;
+  display: flex;
+  font-size: 1.6rem;
+  justify-content: center;
+  height: 2rem;
+  padding: $base-pixel;
 }
 
 .last {
-    font-size: 1.4rem;
+  font-size: 1.4rem;
 }
 
 .date {
-    color: $red-color;
-    font-size: 1.6rem;
+  color: $red-color;
+  font-size: 1.6rem;
 }

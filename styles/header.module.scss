@@ -1,24 +1,21 @@
-@import "variables";
+@import 'variables';
 @import 'mixins';
 
 .headerStyle {
-    @include flex-row;
-    justify-content: space-between;
-    align-items: center;
-    padding: $base-pixel;
+  @include flex-row;
+  justify-content: space-between;
+  align-items: center;
+  padding: $base-pixel;
 
-    .heart {
+  .heart {
     font-size: 30px;
     width: 70px;
     display: flex;
     justify-content: space-between;
-    }
+  }
 
-    a {
-        color: $dark-color;
-        text-decoration: none;
-    }
+  a {
+    color: $dark-color;
+    text-decoration: none;
+  }
 }
-
-
-

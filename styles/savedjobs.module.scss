@@ -1,78 +1,78 @@
 @import 'variables';
 
 .savedJobsContainer {
-    margin-bottom: 60px;
+  margin-bottom: 60px;
 }
 
 .savedJobsList {
-    display: flex;
-    gap: 8px;
-    background-color: $light-color;
-    padding: 16px;
-    margin: 8px;
+  display: flex;
+  gap: 8px;
+  background-color: $light-color;
+  padding: 16px;
+  margin: 8px;
 }
 
 .goBack {
-    font-size: 24px;
-    position: absolute;
-    left: 5vw;
-    top: 88px;
+  font-size: 24px;
+  position: absolute;
+  left: 5vw;
+  top: 88px;
 }
 
 .img {
-    border-radius: 5px;
+  border-radius: 5px;
 }
 
 .clearBtn {
-    background-color: $red-color;
-    border: none;
-    color: #fff;
-    font-size: 1.6rem;
-    padding: 12px 30px;
-    position: relative;
-    text-transform: uppercase;
-    transition: 0.25s;
-    width: 100%;
+  background-color: $red-color;
+  border: none;
+  color: #fff;
+  font-size: 1.6rem;
+  padding: 12px 30px;
+  position: relative;
+  text-transform: uppercase;
+  transition: 0.25s;
+  width: 100%;
 }
 
 .infoContainer {
-    display: flex;
-    flex-direction: column;
-    justify-content: space-between;
-    width: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  width: 100%;
 }
 
 .innerText {
-    display: flex;
-    justify-content: space-between;
+  display: flex;
+  justify-content: space-between;
 }
 
 .title {
-    text-align: center;
-    font-size: 36px;
-    margin: 8px 0 12px;
+  text-align: center;
+  font-size: 36px;
+  margin: 8px 0 12px;
 }
 
 .jobTitle {
-    font-size: 18px;
-    margin: 0;
+  font-size: 18px;
+  margin: 0;
 }
 
 .company {
-    font-size: 14px;
-    margin: 4px 0;
+  font-size: 14px;
+  margin: 4px 0;
 }
 
 .close {
-    color: $red-color;
-    font-size: 16px;
-    font-weight: 600;
+  color: $red-color;
+  font-size: 16px;
+  font-weight: 600;
 }
 
 .paragraph {
-    background-color: #fff;
-    font-size: 16px;
-    margin: 0;
-    padding: 8px;
-    text-align: center;
+  background-color: #fff;
+  font-size: 16px;
+  margin: 0;
+  padding: 8px;
+  text-align: center;
 }

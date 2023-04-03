@@ -9,23 +9,16 @@
     "lint": "next lint"
   },
   "dependencies": {
-    "@floating-ui/dom": "^1.2.5",
     "@formkit/auto-animate": "^1.0.0-beta.6",
-    "@react-spring/web": "^9.5.5",
-    "animate": "^1.0.0",
-    "auto": "^10.43.0",
-    "date-fns": "^2.29.3",
     "eslint": "8.36.0",
     "eslint-config-next": "13.2.4",
     "grommet-icons": "^4.10.0",
     "next": "13.2.4",
-    "normalize.css": "^8.0.1",
     "react": "18.2.0",
     "react-dom": "18.2.0",
     "react-icons": "^4.8.0",
     "react-select": "^5.7.2",
-    "react-tinder-card": "^1.6.2",
-    "swiper": "^9.1.1"
+    "react-tinder-card": "^1.6.2"
   },
   "devDependencies": {
     "prettier": "2.8.5",
