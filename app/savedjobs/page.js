@@ -2,7 +2,7 @@
 import React, { useState, useEffect } from 'react';
 import styles from '../../styles/savedjobs.module.scss';
 import EmailModal from '../components/EmailModal';
-import { VscHeartFilled, VscHeart, VscArrowLeft } from 'react-icons/vsc';
+import { VscHeartFilled, VscArrowLeft } from 'react-icons/vsc';
 import { useAutoAnimate } from '@formkit/auto-animate/react';
 import Link from 'next/link';
 import Icon from '../icon';
@@ -11,7 +11,6 @@ function SavedJobs() {
   const [savedJobs, setSavedJobs] = useState([0]);
   const [listRef] = useAutoAnimate();
 
-  //why use map here?? maybe should only be retrieving the data
   useEffect(() => {
     const savedJobsData = Object.keys(localStorage).map((key) =>
       JSON.parse(localStorage.getItem(key))
